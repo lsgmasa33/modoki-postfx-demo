@@ -1,5 +1,8 @@
 # Post-FX Demo — Modoki
 
+![A gold-lit gothic statue on a dark museum plinth, bloom haloing its highlights, a
+softly blurred cat statue on a plinth behind it, captioned "All Composed"](screenshot.png)
+
 A showcase of the [Modoki](https://modoki-engine.com) engine's **composable WebGPU
 post-process stack**: NPR stylized outlines, bloom, vignette, depth of field, and ground-
 truth ambient occlusion (GTAO) — all layered on ONE scene, one effect at a time, then all
