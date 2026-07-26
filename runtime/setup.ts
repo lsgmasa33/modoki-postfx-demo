@@ -1,11 +1,9 @@
 /** Post-Process Demo — game-specific systems.
  *
- *  Two UIActions, both owned by one scene-scoped Manager:
+ *  One UIAction, owned by one scene-scoped Manager:
  *   - `postfx.showOnly` — driven by the Director's PostFX Tour timeline
  *     (runtime/assets/timelines/postfx-tour.timeline.json), a signal track
  *     whose markers name which effect is "now showing" + its caption text.
- *   - `postfx.toggle` — the before/after button; flips every postfx trait's
- *     `enabled` in lockstep and derives the button label from the result.
  */
 
 import {
@@ -37,9 +35,8 @@ function parseEffects(spec: string): Set<PostFXEffect> {
   );
 }
 
-// Scene-authored GUIDs (main.json) — the caption label and the before/after button.
+// Scene-authored GUIDs (main.json) — the caption label.
 const CAPTION_GUID = 'c10a1955-bc5f-4ae1-a08b-13abcbb053a8';
-const TOGGLE_BUTTON_GUID = 'dc41e36c-4701-47be-a6f9-93e96a71f01a';
 const AMBIENT_LIGHT_GUID = '10f5719d-95c2-4b2d-909e-34d30a4a1486';
 const ENVIRONMENT_GUID = '6bdfab72-8dad-40d7-8127-6974dcf56612';
 
@@ -184,39 +181,6 @@ const postfxManager: ManagerDef = {
           markUIDirty();
         }
       },
-    },
-
-    // Before/after: flips the SAME four effects the "All Composed" finale uses, and
-    // always forces NPR off. Including NPR here would make the button incoherent — press
-    // it during the NPR station and you'd get a grayscale frame with bloom/DOF/AO layered
-    // under it, which reads as neither "before" nor "after".
-    'postfx.toggle': ({ world }: UIActionContext) => {
-      const bloom = world.queryFirst(BloomPostFX);
-      if (!bloom) return;
-      const nowOn = !bloom.get(BloomPostFX)!.enabled;
-
-      const npr = world.queryFirst(NPRPostFX);
-      const vignette = world.queryFirst(VignettePostFX);
-      const dof = world.queryFirst(DepthOfFieldPostFX);
-      const ao = world.queryFirst(AmbientOcclusionPostFX);
-      if (npr) npr.set(NPRPostFX, { ...npr.get(NPRPostFX)!, enabled: false });
-      // NPR is forced off here, so drop the NPR station's lighting overrides with it —
-      // otherwise the button leaves the gallery over-lit for every other station.
-      applyStationLighting(world, {});
-      bloom.set(BloomPostFX, { ...bloom.get(BloomPostFX)!, enabled: nowOn });
-      if (vignette) vignette.set(VignettePostFX, { ...vignette.get(VignettePostFX)!, enabled: nowOn });
-      if (dof) dof.set(DepthOfFieldPostFX, { ...dof.get(DepthOfFieldPostFX)!, enabled: nowOn });
-      if (ao) ao.set(AmbientOcclusionPostFX, { ...ao.get(AmbientOcclusionPostFX)!, enabled: nowOn });
-
-      const button = findEntityByGuid(TOGGLE_BUTTON_GUID, world);
-      const el = button?.get(UIElement);
-      if (button && el) {
-        const text = nowOn ? 'Show: On' : 'Show: Off';
-        if (el.text !== text) {
-          button.set(UIElement, { ...el, text });
-          markUIDirty();
-        }
-      }
     },
   },
 };

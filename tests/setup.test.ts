@@ -7,7 +7,7 @@
  *     `actions` map is registered with `createTestWorld({ actions })` (see the
  *     `__testing` header comment in setup.ts for why this — not registerManager
  *     itself — is the harness entry point), then dispatched exactly like a
- *     timeline marker / button click would. */
+ *     timeline marker would. */
 
 import { describe, it, expect, afterEach } from 'vitest';
 import {
@@ -21,7 +21,6 @@ import { __testing } from '../runtime/setup';
 const T = __testing;
 
 const CAPTION_GUID = 'c10a1955-bc5f-4ae1-a08b-13abcbb053a8';
-const TOGGLE_BUTTON_GUID = 'dc41e36c-4701-47be-a6f9-93e96a71f01a';
 const AMBIENT_LIGHT_GUID = '10f5719d-95c2-4b2d-909e-34d30a4a1486';
 const ENVIRONMENT_GUID = '6bdfab72-8dad-40d7-8127-6974dcf56612';
 
@@ -41,7 +40,7 @@ describe('parseEffects (pure)', () => {
   });
 });
 
-describe('postfx.showOnly / postfx.toggle (integration)', () => {
+describe('postfx.showOnly (integration)', () => {
   let w: TestWorld;
 
   function buildWorld(): TestWorld {
@@ -53,7 +52,6 @@ describe('postfx.showOnly / postfx.toggle (integration)', () => {
     w.spawn(DepthOfFieldPostFX({ enabled: false }));
     w.spawn(AmbientOcclusionPostFX({ enabled: false }));
     w.spawn(EntityAttributes({ name: 'Caption', guid: CAPTION_GUID }), UIElement({ text: '' }));
-    w.spawn(EntityAttributes({ name: 'ToggleButton', guid: TOGGLE_BUTTON_GUID }), UIElement({ text: 'Show: Off' }));
     w.spawn(EntityAttributes({ name: 'Ambient Light', guid: AMBIENT_LIGHT_GUID }), Light({ intensity: 0.06, color: 0x2a345c }));
     w.spawn(EntityAttributes({ name: 'Environment', guid: ENVIRONMENT_GUID }), Environment({ intensity: 0.1 }));
     return w;
@@ -100,29 +98,5 @@ describe('postfx.showOnly / postfx.toggle (integration)', () => {
     expect(ambEntity.get(Light)!.intensity).toBe(0.06);
     expect(ambEntity.get(Light)!.color).toBe(0x2a345c);
     expect(envEntity.get(Environment)!.intensity).toBeCloseTo(0.1, 6);
-  });
-
-  it('toggle flips bloom/vignette/dof/ao together and forces NPR off', () => {
-    buildWorld();
-    // Seed as if the NPR station were showing (NPR on, lighting overridden).
-    dispatchUIAction('postfx.showOnly', { params: { effect: 'npr', label: 'NPR', ambient: 1, ambientColor: 0xffffff, env: 1 } });
-
-    dispatchUIAction('postfx.toggle');
-
-    expect(w.world.queryFirst(NPRPostFX)!.get(NPRPostFX)!.enabled).toBe(false);
-    expect(w.world.queryFirst(BloomPostFX)!.get(BloomPostFX)!.enabled).toBe(true);
-    expect(w.world.queryFirst(VignettePostFX)!.get(VignettePostFX)!.enabled).toBe(true);
-    expect(w.world.queryFirst(DepthOfFieldPostFX)!.get(DepthOfFieldPostFX)!.enabled).toBe(true);
-    expect(w.world.queryFirst(AmbientOcclusionPostFX)!.get(AmbientOcclusionPostFX)!.enabled).toBe(true);
-
-    const ambEntity = findEntityByGuid(AMBIENT_LIGHT_GUID, w.world)!;
-    expect(ambEntity.get(Light)!.intensity).toBe(0.06); // NPR's lighting override dropped with it
-
-    const button = findEntityByGuid(TOGGLE_BUTTON_GUID, w.world)!;
-    expect(button.get(UIElement)!.text).toBe('Show: On');
-
-    dispatchUIAction('postfx.toggle');
-    expect(w.world.queryFirst(BloomPostFX)!.get(BloomPostFX)!.enabled).toBe(false);
-    expect(button.get(UIElement)!.text).toBe('Show: Off');
   });
 });

@@ -4,7 +4,7 @@ A showcase of the [Modoki](https://modoki-engine.com) engine's **composable WebG
 post-process stack**: NPR stylized outlines, bloom, vignette, depth of field, and ground-
 truth ambient occlusion (GTAO) — all layered on ONE scene, one effect at a time, then all
 five composed together. A `Director`/Timeline tour cycles through them automatically on a
-90-second loop; a button lets you flip everything on/off at once for an instant before/after.
+90-second loop.
 
 ## Running it
 
@@ -15,8 +15,6 @@ pipeline.
 1. Open the editor.
 2. **File → Open Project**, and pick this folder.
 3. Press **Play** in the toolbar. The tour runs on a 90-second loop.
-4. Click the **"Show: Off/On"** button (top-right) to force every effect off or back on
-   instantly — the fastest way to see what the stack is actually doing.
 
 To produce a web build, use **Build → Web** in the editor.
 
@@ -67,14 +65,11 @@ recombine the stations without touching TypeScript.
 
 ## The only game code
 
-One scene-scoped Manager (`runtime/setup.ts`, ~85 lines) owning two `UIAction`s:
+One scene-scoped Manager (`runtime/setup.ts`) owning a single `UIAction`:
 - `postfx.showOnly` — the timeline's signal-track markers call this once per station; it
   sets every post-FX trait's `enabled` field from the marker's `effect` param and updates
   the caption from its `label` param. Purely data-driven — a 7th station needs no code
   change, only a new marker.
-- `postfx.toggle` — the before/after button. Reads Bloom's current state, flips every
-  post-FX trait to the opposite state in lockstep, and derives the button label from the
-  result.
 
 The camera framing, the gallery layout and lighting, the station sequence, and every
 effect's tuning are scene/timeline data — none of it is code.
@@ -84,8 +79,6 @@ effect's tuning are scene/timeline data — none of it is code.
 - **A composable post-FX stack, not exclusive branches.** Every `*PostFX` trait
   (`NPRPostFX`, `BloomPostFX`, `VignettePostFX`, `DepthOfFieldPostFX`,
   `AmbientOcclusionPostFX`) is an independent singleton — turn on however many you want.
-- **One generic "flip everything" action.** The before/after toggle needs no per-effect
-  wiring; it queries each trait directly and flips them together.
 - **Verify a post-FX stage by data, not eye.** Every trait's `enabled`/tunables are visible
   in scene state — confirm a station actually changed what's enabled before trusting the
   render.

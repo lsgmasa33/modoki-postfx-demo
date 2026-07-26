@@ -7,8 +7,7 @@ file is the agent-facing one and travels with the demo.
 
 Shows off the engine's composable WebGPU post-process stack (NPR, bloom, vignette, DOF,
 GTAO) in a **night museum gallery** of photoscanned CC0 sculptures, one effect at a time
-via a Director/Timeline tour, then all five composed. A before/after button flips
-everything at once.
+via a Director/Timeline tour, then all five composed.
 
 ## This project
 
@@ -35,7 +34,9 @@ everything at once.
     lights alone would give it nothing to bite into.
   - 5 post-FX resource singletons (`NPRPostFX`/`BloomPostFX`/`VignettePostFX`/
     `DepthOfFieldPostFX`/`AmbientOcclusionPostFX`, all start `enabled:false` — the timeline
-    drives them), a `Director`, and a HUD (`Title`, `Caption`, `ToggleButton`).
+    drives them), a `Director`, and a HUD (`Title`, `Caption`). (The earlier before/after
+    "Show: Off/On" toggle button + its `postfx.toggle` action were removed — the timeline
+    tour is the only driver now.)
 
 ### Staging rationale — why the scene looks the way it does
 The gallery is not decoration; each effect needs something specific or it silently shows
@@ -78,14 +79,14 @@ props at genuinely different depths.
     moving camera a static value leaves the hero blurred and random midground sharp. The
     system rewrites it to the live camera→subject distance each frame; the authored value
     is only the no-tour fallback.
-- **Game code** (`runtime/setup.ts`, ~85 lines) — one scene-scoped Manager
-  (`postfx-demo/postfx`) owning two actions: `postfx.showOnly` (timeline-driven, sets all
-  5 post-FX traits' `enabled` from the `effect` param, updates the `Caption` `UIElement`
-  from `label`, calls `markUIDirty()`) and `postfx.toggle` (the button — reads Bloom's
-  current `enabled`, flips all 5 to that state's opposite, derives the button label from
-  the result). Both resolve the Caption/ToggleButton entities via `findEntityByGuid` with
-  hardcoded scene GUIDs (cheaper and more direct than a name-scan for 2 fixed UI elements
-  in a demo this small).
+- **Game code** (`runtime/setup.ts`) — one scene-scoped Manager (`postfx-demo/postfx`)
+  owning a single action: `postfx.showOnly` (timeline-driven, sets all 5 post-FX traits'
+  `enabled` from the `effect` param, updates the `Caption` `UIElement` from `label`, calls
+  `markUIDirty()`). Resolves the Caption entity via `findEntityByGuid` with a hardcoded
+  scene GUID (cheaper and more direct than a name-scan for one fixed UI element in a demo
+  this small). Also has headless tests: `tests/setup.test.ts` (`parseEffects` +
+  `postfx.showOnly`, dispatched through the real `dispatchUIAction` path) and
+  `tests/cameraTour.test.ts`.
 - **Tuned defaults** (owner should re-tune live, per the engine's "human tunes visual
   feel" convention): Bloom `strength 0.85 / radius 0.65 / threshold 0.6`; DOF
   `focusDistance 7.2` (no-tour fallback; the camera tour tracks it live) `/ focalLength 4 /
@@ -189,13 +190,15 @@ props at genuinely different depths.
   after a batch that reported any warnings before assuming what's actually in the scene.
 - **A signal-track marker's `params` land in `ctx.params`, not `ctx.payload`** — same
   `UIActionContext` shape a button click uses, just populated differently per firing path.
-- **The before/after button fights the auto-advancing timeline** — while `Director.playing`
-  is true, the next station's `postfx.showOnly` marker overwrites a manual toggle within
-  ~15s. The button reads clearly only while the tour is paused/stopped at a station, or
-  you accept it as a momentary flash during playback. Not fixed here — flagged as a real
-  interaction nuance, not silently patched (e.g. auto-pausing the Director on toggle would
-  change the demo's intended "always cycling" feel; that's a call for the owner, not
-  Claude, to make).
+- **A production build's `BASE_URL` is not guaranteed to end with "/"** — Vite only
+  normalizes a leading slash on `base`, not a trailing one. `assetUrl()` used to join
+  `BASE_URL + path` assuming a trailing slash, so a deploy built with e.g.
+  `BASE_PATH=/postfx-demo` (no trailing slash) produced `/postfx-demoassets.manifest.json`
+  — a silent 404 that failed the manifest fetch and dropped EVERY GUID lookup at once
+  (every mesh "unknown guid", full black screen). Traced live against the deployed
+  https://modoki-engine.com/postfx-demo/ before being fixed engine-side in `assetUrl.ts`
+  (now strips a trailing slash before joining, regardless of which form `BASE_URL` takes).
+  See `engine/packages/modoki/tests/runtime/assetUrl.test.ts` for the regression coverage.
 
 ## Identity & build
 
