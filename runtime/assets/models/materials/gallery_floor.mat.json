@@ -1,0 +1,11 @@
+{
+  "id": "71bdb01f-edac-443d-83ea-52ffbdd4c79d",
+  "version": 1,
+  "color": 2500141,
+  "roughness": 0.26,
+  "metalness": 0.12,
+  "emissive": 0,
+  "emissiveIntensity": 1,
+  "envMapIntensity": 0.5,
+  "side": "front"
+}

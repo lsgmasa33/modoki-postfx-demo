@@ -1,0 +1,68 @@
+{
+  "id": "6ef140a4-bb4e-4d68-a35a-1532f595d14f",
+  "version": 1,
+  "name": "Horse_head",
+  "rootLocalId": 1,
+  "entities": [
+    {
+      "localId": 1,
+      "name": "Horse_head",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "Horse_head",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": 0,
+          "layer": "",
+          "guid": ""
+        },
+        "ModelSource": {
+          "glbPath": "d9571149-6146-473c-b14e-668d47346f80",
+          "postprocessor": "none",
+          "prefix": "horse_head"
+        }
+      }
+    },
+    {
+      "localId": 2,
+      "name": "horse_head",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3D": {
+          "mesh": "4884b0ae-38c1-4be3-b3f2-5aaec6e5d790",
+          "material": "f9d2ed39-ae6b-417f-b4e1-5d57e5d7dd59",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "horse_head",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": 1,
+          "layer": "3d",
+          "guid": ""
+        }
+      }
+    }
+  ]
+}

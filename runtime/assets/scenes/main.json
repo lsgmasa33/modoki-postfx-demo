@@ -1,0 +1,2657 @@
+{
+  "id": "f7dda773-da96-46e4-b6bb-35bc231d6cde",
+  "version": 10,
+  "createdAt": "2026-07-26T05:48:24.013Z",
+  "resources": [
+    {
+      "type": "environment",
+      "path": "c17479ff-69df-43c8-8395-509fff3de6ec"
+    },
+    {
+      "type": "material",
+      "path": "04e24dda-30fa-4dff-bbf3-a4a73b32c35e"
+    },
+    {
+      "type": "material",
+      "path": "19ea765a-8d25-4eba-bf7c-c36280a2053e"
+    },
+    {
+      "type": "material",
+      "path": "3571225d-6dbf-41ed-b477-ecb6b489f526"
+    },
+    {
+      "type": "material",
+      "path": "55515c58-5514-4bf4-af42-c9ebae2595a6"
+    },
+    {
+      "type": "material",
+      "path": "60286c3d-f164-4e4b-a795-838a45c2a008"
+    },
+    {
+      "type": "material",
+      "path": "657996e8-dbcf-428f-9a83-70217bdeb7a8"
+    },
+    {
+      "type": "material",
+      "path": "71bdb01f-edac-443d-83ea-52ffbdd4c79d"
+    },
+    {
+      "type": "material",
+      "path": "d5d98b25-52bc-4a43-9a28-95143f63ba0a"
+    },
+    {
+      "type": "material",
+      "path": "db76b836-4da8-44a1-b45b-d8b99db91b29"
+    },
+    {
+      "type": "material",
+      "path": "e4fdb762-ab75-4a2d-83d9-1b6b2d7cb17e"
+    },
+    {
+      "type": "material",
+      "path": "ee58b1c1-077c-4f0d-8955-5ac5689d7a9d"
+    },
+    {
+      "type": "material",
+      "path": "f9d2ed39-ae6b-417f-b4e1-5d57e5d7dd59"
+    },
+    {
+      "type": "material",
+      "path": "fb473171-92b2-4b42-8c3b-d54970702100"
+    },
+    {
+      "type": "mesh",
+      "path": "119b393a-338e-482a-8723-fb169daa3f9e"
+    },
+    {
+      "type": "mesh",
+      "path": "4884b0ae-38c1-4be3-b3f2-5aaec6e5d790"
+    },
+    {
+      "type": "mesh",
+      "path": "4974272b-67df-4dad-ade0-3f086280ae77"
+    },
+    {
+      "type": "mesh",
+      "path": "599a642f-6d49-4db7-a3ef-b3d42f642faf"
+    },
+    {
+      "type": "mesh",
+      "path": "84396f1a-82ec-4e35-b78a-93bb3c2eb558"
+    },
+    {
+      "type": "mesh",
+      "path": "86fc4bd3-85e3-46d2-b297-09f9a90a14bc"
+    },
+    {
+      "type": "mesh",
+      "path": "9e4ee4ab-76ef-4dc6-b525-43fd8d416b6d"
+    },
+    {
+      "type": "mesh",
+      "path": "a963210d-866f-494a-8a87-c8da1abeaad9"
+    },
+    {
+      "type": "mesh",
+      "path": "d97003fa-185f-4a48-9b39-103bb03ef864"
+    },
+    {
+      "type": "timeline",
+      "path": "f685c82a-a56c-4c70-af99-330297ad524b"
+    }
+  ],
+  "entities": [
+    {
+      "id": 1,
+      "name": "Main Camera",
+      "traits": {
+        "Transform": {
+          "x": 0.9,
+          "y": 1.6,
+          "z": 4.6,
+          "rx": -0.03,
+          "ry": 0.1,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Camera": {
+          "projection": "perspective",
+          "fov": 50,
+          "orthoSize": 5,
+          "near": 0.1,
+          "far": 500,
+          "overlayDistance": 3,
+          "clearColor": 328458
+        },
+        "EntityAttributes": {
+          "name": "Main Camera",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "39971d1f-4f5e-4155-99e2-f025d2d69d92",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ambient Light",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "Ambient Light",
+          "isActive": true,
+          "sortOrder": 10,
+          "parentId": "",
+          "layer": "",
+          "guid": "10f5719d-95c2-4b2d-909e-34d30a4a1486",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "ambient",
+          "color": 2765916,
+          "intensity": 0.06,
+          "targetX": 0,
+          "targetY": 0,
+          "targetZ": 0,
+          "distance": 0,
+          "angle": 0.5,
+          "penumbra": 0,
+          "castShadow": false,
+          "shadowMapSize": 2048,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0003,
+          "shadowNormalBias": 0.008,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "Sun",
+      "traits": {
+        "Transform": {
+          "x": -4,
+          "y": 8,
+          "z": 2,
+          "rx": -0.9396258266828337,
+          "ry": 0.24449494730810023,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "Sun",
+          "isActive": true,
+          "sortOrder": 11,
+          "parentId": "",
+          "layer": "",
+          "guid": "69af9358-5d5a-4524-af11-e809b6f8115c",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "directional",
+          "color": 8034687,
+          "intensity": 0.05,
+          "targetX": 0,
+          "targetY": 0,
+          "targetZ": 0,
+          "distance": 0,
+          "angle": 0.5,
+          "penumbra": 0,
+          "castShadow": false,
+          "shadowMapSize": 2048,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0003,
+          "shadowNormalBias": 0.008,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "HUD",
+      "traits": {
+        "RenderableUI": true,
+        "EntityAttributes": {
+          "name": "HUD",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "ui",
+          "guid": "cd4f0c2f-a5bb-40a1-92ae-cf07a7eb7874",
+          "editorFolder": ""
+        },
+        "UIElement": {
+          "width": 100,
+          "height": 100,
+          "widthUnit": "%",
+          "heightUnit": "%",
+          "flexDirection": "column",
+          "flexWrap": "nowrap",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "gap": 0,
+          "flexGrow": 0,
+          "flexShrink": 1,
+          "paddingTop": 0,
+          "paddingTopUnit": "%",
+          "paddingLeft": 0,
+          "paddingLeftUnit": "%",
+          "paddingRight": 0,
+          "paddingRightUnit": "%",
+          "paddingBottom": 0,
+          "paddingBottomUnit": "%",
+          "marginTop": 0,
+          "marginTopUnit": "%",
+          "marginRight": 0,
+          "marginRightUnit": "%",
+          "marginBottom": 0,
+          "marginBottomUnit": "%",
+          "marginLeft": 0,
+          "marginLeftUnit": "%",
+          "minWidth": 0,
+          "minWidthUnit": "px",
+          "maxWidth": 0,
+          "maxWidthUnit": "px",
+          "minHeight": 0,
+          "minHeightUnit": "px",
+          "maxHeight": 0,
+          "maxHeightUnit": "px",
+          "alignSelf": "auto",
+          "zIndex": 0,
+          "overflow": "visible",
+          "isVisible": true,
+          "backgroundColor": 0,
+          "backgroundOpacity": 0,
+          "borderRadius": 0,
+          "borderWidth": 0,
+          "borderColor": 3355443,
+          "borderOpacity": 1,
+          "opacity": 1,
+          "text": "",
+          "fontFamily": "",
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "fontStyle": "normal",
+          "textColor": 16777215,
+          "textOpacity": 1,
+          "textAlign": "left",
+          "lineHeight": 0,
+          "letterSpacing": 0,
+          "textShadowColor": 0,
+          "textShadowOpacity": 1,
+          "textShadowOffsetX": 0,
+          "textShadowOffsetY": 0,
+          "textShadowBlur": 0,
+          "textStrokeColor": 0,
+          "textStrokeOpacity": 1,
+          "textStrokeWidth": 0,
+          "textOverflow": "clip",
+          "maxLines": 0,
+          "imageSrc": "",
+          "imageMode": "cover",
+          "elementType": "div",
+          "placeholder": "",
+          "rangeMin": 0,
+          "rangeMax": 100,
+          "rangeStep": 1
+        },
+        "UIAnchor": {
+          "anchor": "stretch",
+          "top": 0,
+          "topUnit": "px",
+          "left": 0,
+          "leftUnit": "px",
+          "right": 0,
+          "rightUnit": "px",
+          "bottom": 0,
+          "bottomUnit": "px",
+          "pivotX": 0,
+          "pivotY": 0,
+          "safeArea": true,
+          "zIndex": 0
+        }
+      }
+    },
+    {
+      "id": 5,
+      "name": "Title",
+      "traits": {
+        "RenderableUI": true,
+        "EntityAttributes": {
+          "name": "Title",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "cd4f0c2f-a5bb-40a1-92ae-cf07a7eb7874",
+          "layer": "ui",
+          "guid": "d24af8bf-f707-4082-91b8-7161b9499cbb",
+          "editorFolder": ""
+        },
+        "UIElement": {
+          "width": 0,
+          "height": 0,
+          "widthUnit": "%",
+          "heightUnit": "%",
+          "flexDirection": "column",
+          "flexWrap": "nowrap",
+          "justifyContent": "flex-start",
+          "alignItems": "stretch",
+          "gap": 0,
+          "flexGrow": 0,
+          "flexShrink": 1,
+          "paddingTop": 0,
+          "paddingTopUnit": "%",
+          "paddingLeft": 0,
+          "paddingLeftUnit": "%",
+          "paddingRight": 0,
+          "paddingRightUnit": "%",
+          "paddingBottom": 0,
+          "paddingBottomUnit": "%",
+          "marginTop": 0,
+          "marginTopUnit": "%",
+          "marginRight": 0,
+          "marginRightUnit": "%",
+          "marginBottom": 0,
+          "marginBottomUnit": "%",
+          "marginLeft": 0,
+          "marginLeftUnit": "%",
+          "minWidth": 0,
+          "minWidthUnit": "px",
+          "maxWidth": 0,
+          "maxWidthUnit": "px",
+          "minHeight": 0,
+          "minHeightUnit": "px",
+          "maxHeight": 0,
+          "maxHeightUnit": "px",
+          "alignSelf": "auto",
+          "zIndex": 0,
+          "overflow": "visible",
+          "isVisible": true,
+          "backgroundColor": 0,
+          "backgroundOpacity": 0,
+          "borderRadius": 0,
+          "borderWidth": 0,
+          "borderColor": 3355443,
+          "borderOpacity": 1,
+          "opacity": 1,
+          "text": "MODOKI · POST-PROCESS STACK",
+          "fontFamily": "",
+          "fontSize": 11,
+          "fontWeight": "bold",
+          "fontStyle": "normal",
+          "textColor": 16777215,
+          "textOpacity": 0.62,
+          "textAlign": "left",
+          "lineHeight": 0,
+          "letterSpacing": 2.2,
+          "textShadowColor": 0,
+          "textShadowOpacity": 0.7,
+          "textShadowOffsetX": 0,
+          "textShadowOffsetY": 1,
+          "textShadowBlur": 8,
+          "textStrokeColor": 0,
+          "textStrokeOpacity": 1,
+          "textStrokeWidth": 0,
+          "textOverflow": "clip",
+          "maxLines": 0,
+          "imageSrc": "",
+          "imageMode": "cover",
+          "elementType": "div",
+          "placeholder": "",
+          "rangeMin": 0,
+          "rangeMax": 100,
+          "rangeStep": 1
+        },
+        "UIAnchor": {
+          "anchor": "top-left",
+          "top": 22,
+          "topUnit": "px",
+          "left": 26,
+          "leftUnit": "px",
+          "right": 0,
+          "rightUnit": "px",
+          "bottom": 0,
+          "bottomUnit": "px",
+          "pivotX": 0,
+          "pivotY": 0,
+          "safeArea": true,
+          "zIndex": 0
+        }
+      }
+    },
+    {
+      "id": 6,
+      "name": "NPR (resource)",
+      "traits": {
+        "EntityAttributes": {
+          "name": "NPR (resource)",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "3906efcb-fe64-4ed0-8685-19bc477c99b1",
+          "editorFolder": ""
+        },
+        "NPRPostFX": {
+          "enabled": false,
+          "fillMode": "grayscale",
+          "depthThreshold": 0.004,
+          "normalThreshold": 0.4,
+          "colorThreshold": 0.15,
+          "lineThickness": 1,
+          "lineStrength": 1,
+          "grayscaleGamma": 1.15,
+          "grayscaleLift": 0,
+          "fxaa": true,
+          "fxaaEdgeThreshold": 0.125,
+          "fxaaEdgeThresholdMin": 0.0312,
+          "fxaaBlendStrength": 4,
+          "superSampleScale": 1
+        }
+      }
+    },
+    {
+      "id": 7,
+      "name": "Bloom (resource)",
+      "traits": {
+        "EntityAttributes": {
+          "name": "Bloom (resource)",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "76af64d5-1415-4a29-9750-7e4cdb21293a",
+          "editorFolder": ""
+        },
+        "BloomPostFX": {
+          "enabled": false,
+          "strength": 0.85,
+          "radius": 0.65,
+          "threshold": 0.6
+        }
+      }
+    },
+    {
+      "id": 8,
+      "name": "Vignette (resource)",
+      "traits": {
+        "EntityAttributes": {
+          "name": "Vignette (resource)",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "1f09fe14-96dd-4c73-8804-afbe492b027b",
+          "editorFolder": ""
+        },
+        "VignettePostFX": {
+          "enabled": false,
+          "intensity": 1,
+          "smoothness": 0.8
+        }
+      }
+    },
+    {
+      "id": 9,
+      "name": "DOF (resource)",
+      "traits": {
+        "EntityAttributes": {
+          "name": "DOF (resource)",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "d8acf5d1-7fce-4c85-baba-4ab850778406",
+          "editorFolder": ""
+        },
+        "DepthOfFieldPostFX": {
+          "enabled": false,
+          "focusDistance": 7.2,
+          "focalLength": 4,
+          "bokehScale": 3.5
+        }
+      }
+    },
+    {
+      "id": 10,
+      "name": "AO (resource)",
+      "traits": {
+        "EntityAttributes": {
+          "name": "AO (resource)",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "bd45ccef-09ef-44dc-b4f9-11e56e6f72cf",
+          "editorFolder": ""
+        },
+        "AmbientOcclusionPostFX": {
+          "enabled": false,
+          "radius": 0.1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "id": 11,
+      "name": "Caption",
+      "traits": {
+        "RenderableUI": true,
+        "EntityAttributes": {
+          "name": "Caption",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "cd4f0c2f-a5bb-40a1-92ae-cf07a7eb7874",
+          "layer": "",
+          "guid": "c10a1955-bc5f-4ae1-a08b-13abcbb053a8",
+          "editorFolder": ""
+        },
+        "UIElement": {
+          "width": 86,
+          "height": 0,
+          "widthUnit": "%",
+          "heightUnit": "%",
+          "flexDirection": "column",
+          "flexWrap": "nowrap",
+          "justifyContent": "flex-start",
+          "alignItems": "stretch",
+          "gap": 0,
+          "flexGrow": 0,
+          "flexShrink": 1,
+          "paddingTop": 0,
+          "paddingTopUnit": "%",
+          "paddingLeft": 0,
+          "paddingLeftUnit": "%",
+          "paddingRight": 0,
+          "paddingRightUnit": "%",
+          "paddingBottom": 0,
+          "paddingBottomUnit": "%",
+          "marginTop": 0,
+          "marginTopUnit": "%",
+          "marginRight": 0,
+          "marginRightUnit": "%",
+          "marginBottom": 0,
+          "marginBottomUnit": "%",
+          "marginLeft": 0,
+          "marginLeftUnit": "%",
+          "minWidth": 0,
+          "minWidthUnit": "px",
+          "maxWidth": 0,
+          "maxWidthUnit": "px",
+          "minHeight": 0,
+          "minHeightUnit": "px",
+          "maxHeight": 0,
+          "maxHeightUnit": "px",
+          "alignSelf": "auto",
+          "zIndex": 0,
+          "overflow": "visible",
+          "isVisible": true,
+          "backgroundColor": 0,
+          "backgroundOpacity": 0,
+          "borderRadius": 0,
+          "borderWidth": 0,
+          "borderColor": 3355443,
+          "borderOpacity": 1,
+          "opacity": 1,
+          "text": "",
+          "fontFamily": "",
+          "fontSize": 19,
+          "fontWeight": "bold",
+          "fontStyle": "normal",
+          "textColor": 16777215,
+          "textOpacity": 0.95,
+          "textAlign": "center",
+          "lineHeight": 0,
+          "letterSpacing": 0.8,
+          "textShadowColor": 0,
+          "textShadowOpacity": 0.85,
+          "textShadowOffsetX": 0,
+          "textShadowOffsetY": 1,
+          "textShadowBlur": 14,
+          "textStrokeColor": 0,
+          "textStrokeOpacity": 1,
+          "textStrokeWidth": 0,
+          "textOverflow": "clip",
+          "maxLines": 1,
+          "imageSrc": "",
+          "imageMode": "cover",
+          "elementType": "div",
+          "placeholder": "",
+          "rangeMin": 0,
+          "rangeMax": 100,
+          "rangeStep": 1
+        },
+        "UIAnchor": {
+          "anchor": "bottom",
+          "top": 0,
+          "topUnit": "px",
+          "left": 0,
+          "leftUnit": "px",
+          "right": 0,
+          "rightUnit": "px",
+          "bottom": 44,
+          "bottomUnit": "px",
+          "pivotX": 0.5,
+          "pivotY": 1,
+          "safeArea": true,
+          "zIndex": 0
+        }
+      }
+    },
+    {
+      "id": 12,
+      "name": "ToggleButton",
+      "traits": {
+        "RenderableUI": true,
+        "EntityAttributes": {
+          "name": "ToggleButton",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "cd4f0c2f-a5bb-40a1-92ae-cf07a7eb7874",
+          "layer": "",
+          "guid": "dc41e36c-4701-47be-a6f9-93e96a71f01a",
+          "editorFolder": ""
+        },
+        "UIElement": {
+          "width": 0,
+          "height": 0,
+          "widthUnit": "%",
+          "heightUnit": "%",
+          "flexDirection": "column",
+          "flexWrap": "nowrap",
+          "justifyContent": "flex-start",
+          "alignItems": "stretch",
+          "gap": 0,
+          "flexGrow": 0,
+          "flexShrink": 1,
+          "paddingTop": 8,
+          "paddingTopUnit": "px",
+          "paddingLeft": 14,
+          "paddingLeftUnit": "px",
+          "paddingRight": 14,
+          "paddingRightUnit": "px",
+          "paddingBottom": 8,
+          "paddingBottomUnit": "px",
+          "marginTop": 0,
+          "marginTopUnit": "%",
+          "marginRight": 0,
+          "marginRightUnit": "%",
+          "marginBottom": 0,
+          "marginBottomUnit": "%",
+          "marginLeft": 0,
+          "marginLeftUnit": "%",
+          "minWidth": 0,
+          "minWidthUnit": "px",
+          "maxWidth": 0,
+          "maxWidthUnit": "px",
+          "minHeight": 0,
+          "minHeightUnit": "px",
+          "maxHeight": 0,
+          "maxHeightUnit": "px",
+          "alignSelf": "auto",
+          "zIndex": 0,
+          "overflow": "visible",
+          "isVisible": true,
+          "backgroundColor": 1315860,
+          "backgroundOpacity": 0.55,
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "borderColor": 5592405,
+          "borderOpacity": 0.55,
+          "opacity": 1,
+          "text": "Show: Off",
+          "fontFamily": "",
+          "fontSize": 11,
+          "fontWeight": "bold",
+          "fontStyle": "normal",
+          "textColor": 16777215,
+          "textOpacity": 0.8,
+          "textAlign": "center",
+          "lineHeight": 0,
+          "letterSpacing": 1.4,
+          "textShadowColor": 0,
+          "textShadowOpacity": 1,
+          "textShadowOffsetX": 0,
+          "textShadowOffsetY": 0,
+          "textShadowBlur": 0,
+          "textStrokeColor": 0,
+          "textStrokeOpacity": 1,
+          "textStrokeWidth": 0,
+          "textOverflow": "clip",
+          "maxLines": 0,
+          "imageSrc": "",
+          "imageMode": "cover",
+          "elementType": "div",
+          "placeholder": "",
+          "rangeMin": 0,
+          "rangeMax": 100,
+          "rangeStep": 1
+        },
+        "UIAction": {
+          "bindings": [
+            {
+              "event": "click",
+              "kind": "call",
+              "action": "postfx.toggle"
+            }
+          ]
+        },
+        "UIAnchor": {
+          "anchor": "top-right",
+          "top": 20,
+          "topUnit": "px",
+          "left": 0,
+          "leftUnit": "px",
+          "right": 24,
+          "rightUnit": "px",
+          "bottom": 0,
+          "bottomUnit": "px",
+          "pivotX": 0,
+          "pivotY": 0,
+          "safeArea": true,
+          "zIndex": 0
+        }
+      }
+    },
+    {
+      "id": 13,
+      "name": "Director",
+      "traits": {
+        "EntityAttributes": {
+          "name": "Director",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "66212aa3-376f-44be-a4e1-2046d70a1987",
+          "editorFolder": ""
+        },
+        "Director": {
+          "timeline": "f685c82a-a56c-4c70-af99-330297ad524b",
+          "time": 0,
+          "speed": 1,
+          "playing": true,
+          "loop": true
+        }
+      }
+    },
+    {
+      "id": 14,
+      "name": "Environment",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "Environment",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "6bdfab72-8dad-40d7-8127-6974dcf56612",
+          "editorFolder": ""
+        },
+        "Environment": {
+          "hdrPath": "c17479ff-69df-43c8-8395-509fff3de6ec",
+          "intensity": 0.1,
+          "showAsBackground": false,
+          "backgroundIntensity": 0.2,
+          "backgroundBlurriness": 0.4
+        }
+      }
+    },
+    {
+      "id": 15,
+      "name": "Floor",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": -0.05,
+          "z": -8,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 11,
+          "sy": 0.1,
+          "sz": 30
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "box",
+          "color": 16777215,
+          "size": 1,
+          "material": "71bdb01f-edac-443d-83ea-52ffbdd4c79d",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "Floor",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "9c132307-aca6-43a5-bcdf-644d2bddcc52",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 16,
+      "name": "Ceiling",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 6.2,
+          "z": -8,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 11,
+          "sy": 0.2,
+          "sz": 30
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "box",
+          "color": 16777215,
+          "size": 1,
+          "material": "d5d98b25-52bc-4a43-9a28-95143f63ba0a",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "Ceiling",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "9b8c5f5f-c96f-4760-83d5-8abd72c5deb3",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 17,
+      "name": "WallBack",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 3.1,
+          "z": -22.9,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 11,
+          "sy": 6.2,
+          "sz": 0.2
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "box",
+          "color": 16777215,
+          "size": 1,
+          "material": "d5d98b25-52bc-4a43-9a28-95143f63ba0a",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "WallBack",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "8b4dbd8e-399b-4119-8007-ec8b207f6c64",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 18,
+      "name": "WallLeft",
+      "traits": {
+        "Transform": {
+          "x": -5.5,
+          "y": 3.1,
+          "z": -8,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 0.2,
+          "sy": 6.2,
+          "sz": 30
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "box",
+          "color": 16777215,
+          "size": 1,
+          "material": "d5d98b25-52bc-4a43-9a28-95143f63ba0a",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "WallLeft",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "365940ff-5255-4d3c-ad80-781c5ec8937e",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 19,
+      "name": "WallRight",
+      "traits": {
+        "Transform": {
+          "x": 5.5,
+          "y": 3.1,
+          "z": -8,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 0.2,
+          "sy": 6.2,
+          "sz": 30
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "box",
+          "color": 16777215,
+          "size": 1,
+          "material": "d5d98b25-52bc-4a43-9a28-95143f63ba0a",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "WallRight",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "bfc2fb60-f040-41b0-810a-8b3171191a31",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 20,
+      "name": "WallFront",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 3.1,
+          "z": 6.9,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 11,
+          "sy": 6.2,
+          "sz": 0.2
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "box",
+          "color": 16777215,
+          "size": 1,
+          "material": "d5d98b25-52bc-4a43-9a28-95143f63ba0a",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "WallFront",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "730f587c-7279-4a23-89dd-d34a84675385",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 21,
+      "name": "PlinthLantern",
+      "traits": {
+        "Transform": {
+          "x": -1.05,
+          "y": 0.375,
+          "z": 2.7,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 0.65,
+          "sy": 0.75,
+          "sz": 0.65
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "box",
+          "color": 16777215,
+          "size": 1,
+          "material": "55515c58-5514-4bf4-af42-c9ebae2595a6",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "PlinthLantern",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "b5e91819-f388-42dd-8162-f06a50cf3486",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 22,
+      "name": "PlinthGothic",
+      "traits": {
+        "Transform": {
+          "x": -1.6,
+          "y": 0.5,
+          "z": -2.5,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1.7,
+          "sy": 1,
+          "sz": 1.7
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "box",
+          "color": 16777215,
+          "size": 1,
+          "material": "55515c58-5514-4bf4-af42-c9ebae2595a6",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "PlinthGothic",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "faaec64a-95d0-4602-8880-5a29bfc56f7b",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 23,
+      "name": "PlinthHorse",
+      "traits": {
+        "Transform": {
+          "x": 2,
+          "y": 0.55,
+          "z": -4.5,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 0.8,
+          "sy": 1.1,
+          "sz": 0.8
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "box",
+          "color": 16777215,
+          "size": 1,
+          "material": "55515c58-5514-4bf4-af42-c9ebae2595a6",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "PlinthHorse",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "c2684790-b375-4aa0-8fb4-624de445830e",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 24,
+      "name": "PlinthCat",
+      "traits": {
+        "Transform": {
+          "x": -2.8,
+          "y": 0.475,
+          "z": -8.5,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 0.8,
+          "sy": 0.95,
+          "sz": 0.8
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "box",
+          "color": 16777215,
+          "size": 1,
+          "material": "55515c58-5514-4bf4-af42-c9ebae2595a6",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "PlinthCat",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "0077f4b7-4150-42af-8925-9bc7d937dbc2",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 25,
+      "name": "PlinthWhale",
+      "traits": {
+        "Transform": {
+          "x": 2.6,
+          "y": 0.475,
+          "z": -12,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1.05,
+          "sy": 0.95,
+          "sz": 1.05
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "box",
+          "color": 16777215,
+          "size": 1,
+          "material": "55515c58-5514-4bf4-af42-c9ebae2595a6",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "PlinthWhale",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "f103d632-4124-44f9-acda-5081456aa839",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 26,
+      "name": "PlinthVase",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0.5,
+          "z": -16,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 0.85,
+          "sy": 1,
+          "sz": 0.85
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "box",
+          "color": 16777215,
+          "size": 1,
+          "material": "55515c58-5514-4bf4-af42-c9ebae2595a6",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "PlinthVase",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "4b48f35b-0914-467e-8474-204461bb1c59",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 27,
+      "name": "GothicStatue",
+      "traits": {
+        "Transform": {
+          "x": -1.389,
+          "y": 2.027,
+          "z": -1.96,
+          "rx": 0,
+          "ry": 0.35,
+          "rz": 0,
+          "sx": 0.85,
+          "sy": 0.85,
+          "sz": 0.85
+        },
+        "Renderable3D": {
+          "mesh": "86fc4bd3-85e3-46d2-b297-09f9a90a14bc",
+          "material": "19ea765a-8d25-4eba-bf7c-c36280a2053e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "GothicStatue",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "0c985b10-f45e-47db-a82e-4b2fcfa215e8",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 28,
+      "name": "HorseHead",
+      "traits": {
+        "Transform": {
+          "x": 2,
+          "y": 1.1,
+          "z": -4.5,
+          "rx": 0,
+          "ry": -0.6,
+          "rz": 0,
+          "sx": 1.5,
+          "sy": 1.5,
+          "sz": 1.5
+        },
+        "Renderable3D": {
+          "mesh": "4884b0ae-38c1-4be3-b3f2-5aaec6e5d790",
+          "material": "f9d2ed39-ae6b-417f-b4e1-5d57e5d7dd59",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "HorseHead",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "7aa94a57-8ae1-4bb5-8135-4ab09d4e801c",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 29,
+      "name": "CatStatue",
+      "traits": {
+        "Transform": {
+          "x": -2.8,
+          "y": 0.95,
+          "z": -8.5,
+          "rx": 0,
+          "ry": 0.9,
+          "rz": 0,
+          "sx": 1.8,
+          "sy": 1.8,
+          "sz": 1.8
+        },
+        "Renderable3D": {
+          "mesh": "599a642f-6d49-4db7-a3ef-b3d42f642faf",
+          "material": "60286c3d-f164-4e4b-a795-838a45c2a008",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "CatStatue",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "5c32dd48-a772-40b5-bac2-afa4d6abd3ea",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 30,
+      "name": "WhaleStatue",
+      "traits": {
+        "Transform": {
+          "x": 2.6,
+          "y": 0.95,
+          "z": -12,
+          "rx": 0,
+          "ry": -0.4,
+          "rz": 0,
+          "sx": 0.7,
+          "sy": 0.7,
+          "sz": 0.7
+        },
+        "Renderable3D": {
+          "mesh": "d97003fa-185f-4a48-9b39-103bb03ef864",
+          "material": "db76b836-4da8-44a1-b45b-d8b99db91b29",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "WhaleStatue",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "12cd7e4b-896b-4f0c-88f5-c1ac42d73f8b",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 31,
+      "name": "CeramicVase",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 1,
+          "z": -16,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "sz": 1.6
+        },
+        "Renderable3D": {
+          "mesh": "119b393a-338e-482a-8723-fb169daa3f9e",
+          "material": "3571225d-6dbf-41ed-b477-ecb6b489f526",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "CeramicVase",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "d2d62116-0d4b-43a9-87b5-f96eaf331dc0",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 32,
+      "name": "LanternBody",
+      "traits": {
+        "Transform": {
+          "x": -1.05,
+          "y": 0.75,
+          "z": 2.7,
+          "rx": 0,
+          "ry": 0.5,
+          "rz": 0,
+          "sx": 2.5,
+          "sy": 2.5,
+          "sz": 2.5
+        },
+        "Renderable3D": {
+          "mesh": "4974272b-67df-4dad-ade0-3f086280ae77",
+          "material": "ee58b1c1-077c-4f0d-8955-5ac5689d7a9d",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "LanternBody",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "df1e271f-47bf-4afd-9fe0-2426a328d8c2",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 33,
+      "name": "LanternGlass",
+      "traits": {
+        "Transform": {
+          "x": -1.05,
+          "y": 0.75,
+          "z": 2.7,
+          "rx": 0,
+          "ry": 0.5,
+          "rz": 0,
+          "sx": 2.5,
+          "sy": 2.5,
+          "sz": 2.5
+        },
+        "Renderable3D": {
+          "mesh": "a963210d-866f-494a-8a87-c8da1abeaad9",
+          "material": "fb473171-92b2-4b42-8c3b-d54970702100",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "LanternGlass",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "30b696ea-d21a-4912-a778-fb0c70eb18b6",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 34,
+      "name": "ChandelierFrame",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 5.0404,
+          "z": -5.5061,
+          "rx": 1.5707963,
+          "ry": 0,
+          "rz": 0,
+          "sx": 0.011035,
+          "sy": 0.011035,
+          "sz": 0.011035
+        },
+        "Renderable3D": {
+          "mesh": "9e4ee4ab-76ef-4dc6-b525-43fd8d416b6d",
+          "material": "657996e8-dbcf-428f-9a83-70217bdeb7a8",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "ChandelierFrame",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "d6a28a2a-d4f6-41c3-8c50-a8ef46bd77b3",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 35,
+      "name": "ChandelierLamps",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 5.0404,
+          "z": -5.5061,
+          "rx": 1.5707963,
+          "ry": 0,
+          "rz": 0,
+          "sx": 0.011035,
+          "sy": 0.011035,
+          "sz": 0.011035
+        },
+        "Renderable3D": {
+          "mesh": "84396f1a-82ec-4e35-b78a-93bb3c2eb558",
+          "material": "04e24dda-30fa-4dff-bbf3-a4a73b32c35e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "ChandelierLamps",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "5dc96c78-9ea8-42b9-bbf2-5f7636099bfa",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 36,
+      "name": "SpotGothic",
+      "traits": {
+        "Transform": {
+          "x": -0.099,
+          "y": 4.94,
+          "z": -0.998,
+          "rx": -1.1325,
+          "ry": 0.4014,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "SpotGothic",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "3391ff2a-f2fb-480e-a5a9-5d017fb2b6b8",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "spot",
+          "color": 16764320,
+          "intensity": 120,
+          "targetX": -1.6,
+          "targetY": 1.7,
+          "targetZ": -2.5,
+          "distance": 16,
+          "angle": 0.45,
+          "penumbra": 0.5,
+          "castShadow": true,
+          "shadowMapSize": 1024,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0005,
+          "shadowNormalBias": 0.02,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 37,
+      "name": "SpotHorse",
+      "traits": {
+        "Transform": {
+          "x": 3.453,
+          "y": 4.614,
+          "z": -2.931,
+          "rx": -1.1325,
+          "ry": 0.4014,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "SpotHorse",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "631fb198-3bb5-4eb7-8ca7-edbafb8ddec2",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "spot",
+          "color": 16764320,
+          "intensity": 90,
+          "targetX": 1.95,
+          "targetY": 1.41,
+          "targetZ": -4.43,
+          "distance": 14,
+          "angle": 0.45,
+          "penumbra": 0.5,
+          "castShadow": true,
+          "shadowMapSize": 1024,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0005,
+          "shadowNormalBias": 0.02,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 38,
+      "name": "SpotCat",
+      "traits": {
+        "Transform": {
+          "x": -1.337,
+          "y": 4.405,
+          "z": -7.025,
+          "rx": -1.1325,
+          "ry": 0.4014,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "SpotCat",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "4e3d1215-e879-420d-b7d0-a68358a68c8c",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "spot",
+          "color": 16764320,
+          "intensity": 80,
+          "targetX": -2.84,
+          "targetY": 1.2,
+          "targetZ": -8.52,
+          "distance": 14,
+          "angle": 0.45,
+          "penumbra": 0.5,
+          "castShadow": true,
+          "shadowMapSize": 1024,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0005,
+          "shadowNormalBias": 0.02,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 39,
+      "name": "SpotWhale",
+      "traits": {
+        "Transform": {
+          "x": 4.109,
+          "y": 4.525,
+          "z": -10.6,
+          "rx": -1.1325,
+          "ry": 0.4014,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "SpotWhale",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "df254e35-ca8e-4e38-804c-5706378f9dfa",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "spot",
+          "color": 16764320,
+          "intensity": 90,
+          "targetX": 2.61,
+          "targetY": 1.32,
+          "targetZ": -12.1,
+          "distance": 14,
+          "angle": 0.45,
+          "penumbra": 0.5,
+          "castShadow": true,
+          "shadowMapSize": 1024,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0005,
+          "shadowNormalBias": 0.02,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 40,
+      "name": "SpotVase",
+      "traits": {
+        "Transform": {
+          "x": 1.5,
+          "y": 4.551,
+          "z": -14.5,
+          "rx": -1.1325,
+          "ry": 0.4014,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "SpotVase",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "9e03b375-9c06-40e3-b542-7bdcf286b317",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "spot",
+          "color": 16764320,
+          "intensity": 70,
+          "targetX": 0,
+          "targetY": 1.35,
+          "targetZ": -16,
+          "distance": 14,
+          "angle": 0.45,
+          "penumbra": 0.5,
+          "castShadow": true,
+          "shadowMapSize": 1024,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0005,
+          "shadowNormalBias": 0.02,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 41,
+      "name": "LanternLight",
+      "traits": {
+        "Transform": {
+          "x": -1.05,
+          "y": 0.99,
+          "z": 2.7,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "LanternLight",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "7c369c49-7ed6-4d70-b9fe-d2d208184666",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "point",
+          "color": 16754250,
+          "intensity": 6,
+          "targetX": 0,
+          "targetY": 0,
+          "targetZ": 0,
+          "distance": 5,
+          "angle": 0.5,
+          "penumbra": 0,
+          "castShadow": false,
+          "shadowMapSize": 2048,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0003,
+          "shadowNormalBias": 0.008,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 42,
+      "name": "LanternFlame",
+      "traits": {
+        "Transform": {
+          "x": -1.05,
+          "y": 0.99,
+          "z": 2.7,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "sphere",
+          "color": 16777215,
+          "size": 0.06,
+          "material": "e4fdb762-ab75-4a2d-83d9-1b6b2d7cb17e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "LanternFlame",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "f39ec1b5-d76b-460b-9aaf-416bcb237c60",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 43,
+      "name": "SconceL1Light",
+      "traits": {
+        "Transform": {
+          "x": -5.1,
+          "y": 2.5,
+          "z": -1.5,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "SconceL1Light",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "ef4f1fbe-557d-4391-826d-4b43bf539096",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "point",
+          "color": 16755302,
+          "intensity": 9,
+          "targetX": 0,
+          "targetY": 0,
+          "targetZ": 0,
+          "distance": 10,
+          "angle": 0.5,
+          "penumbra": 0,
+          "castShadow": false,
+          "shadowMapSize": 2048,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0003,
+          "shadowNormalBias": 0.008,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 44,
+      "name": "SconceL1Glow",
+      "traits": {
+        "Transform": {
+          "x": -5.1,
+          "y": 2.5,
+          "z": -1.5,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "sphere",
+          "color": 16777215,
+          "size": 0.1,
+          "material": "e4fdb762-ab75-4a2d-83d9-1b6b2d7cb17e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "SconceL1Glow",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "57f31102-7297-4719-ae2b-fc3270fec8ea",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 45,
+      "name": "SconceL2Light",
+      "traits": {
+        "Transform": {
+          "x": -5.1,
+          "y": 2.5,
+          "z": -9.5,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "SconceL2Light",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "a14b2799-19d9-4393-9b3a-4d0fb08cc0b1",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "point",
+          "color": 16755302,
+          "intensity": 9,
+          "targetX": 0,
+          "targetY": 0,
+          "targetZ": 0,
+          "distance": 10,
+          "angle": 0.5,
+          "penumbra": 0,
+          "castShadow": false,
+          "shadowMapSize": 2048,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0003,
+          "shadowNormalBias": 0.008,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 46,
+      "name": "SconceL2Glow",
+      "traits": {
+        "Transform": {
+          "x": -5.1,
+          "y": 2.5,
+          "z": -9.5,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "sphere",
+          "color": 16777215,
+          "size": 0.1,
+          "material": "e4fdb762-ab75-4a2d-83d9-1b6b2d7cb17e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "SconceL2Glow",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "f2aef686-e2c3-49f9-a69f-55fd53520f9e",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 47,
+      "name": "SconceR1Light",
+      "traits": {
+        "Transform": {
+          "x": 5.1,
+          "y": 2.5,
+          "z": -1.5,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "SconceR1Light",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "474a52e8-8550-4031-b483-80e6df9327a1",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "point",
+          "color": 16755302,
+          "intensity": 9,
+          "targetX": 0,
+          "targetY": 0,
+          "targetZ": 0,
+          "distance": 10,
+          "angle": 0.5,
+          "penumbra": 0,
+          "castShadow": false,
+          "shadowMapSize": 2048,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0003,
+          "shadowNormalBias": 0.008,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 48,
+      "name": "SconceR1Glow",
+      "traits": {
+        "Transform": {
+          "x": 5.1,
+          "y": 2.5,
+          "z": -1.5,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "sphere",
+          "color": 16777215,
+          "size": 0.1,
+          "material": "e4fdb762-ab75-4a2d-83d9-1b6b2d7cb17e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "SconceR1Glow",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "dcb6f8eb-1daa-434a-97d6-97711dfa1ea9",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 49,
+      "name": "SconceR2Light",
+      "traits": {
+        "Transform": {
+          "x": 5.1,
+          "y": 2.5,
+          "z": -9.5,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "SconceR2Light",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "d000264e-af03-47bb-b9cd-ffd03c8b30fc",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "point",
+          "color": 16755302,
+          "intensity": 9,
+          "targetX": 0,
+          "targetY": 0,
+          "targetZ": 0,
+          "distance": 10,
+          "angle": 0.5,
+          "penumbra": 0,
+          "castShadow": false,
+          "shadowMapSize": 2048,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0003,
+          "shadowNormalBias": 0.008,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 50,
+      "name": "SconceR2Glow",
+      "traits": {
+        "Transform": {
+          "x": 5.1,
+          "y": 2.5,
+          "z": -9.5,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "sphere",
+          "color": 16777215,
+          "size": 0.1,
+          "material": "e4fdb762-ab75-4a2d-83d9-1b6b2d7cb17e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "SconceR2Glow",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "2ae0329d-e092-46c7-9446-8b4470565164",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 51,
+      "name": "BackWash",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 4.5,
+          "z": -19.5,
+          "rx": -0.53135,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "BackWash",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "0293b412-ca2a-497b-8b45-9e243256e778",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "spot",
+          "color": 8361928,
+          "intensity": 110,
+          "targetX": 0,
+          "targetY": 0,
+          "targetZ": 0,
+          "distance": 14,
+          "angle": 0.62,
+          "penumbra": 0.85,
+          "castShadow": false,
+          "shadowMapSize": 2048,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0003,
+          "shadowNormalBias": 0.008,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 52,
+      "name": "ChandelierRod",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 5.57,
+          "z": -5.5,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 0.04,
+          "sy": 1.06,
+          "sz": 0.04
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "cylinder",
+          "color": 16777215,
+          "size": 1,
+          "material": "55515c58-5514-4bf4-af42-c9ebae2595a6",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "ChandelierRod",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "6d3119ab-84a5-458a-a110-7f46fabbeb6e",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 53,
+      "name": "ChandelierGlow1",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 4.55,
+          "z": -5.2075,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "sphere",
+          "color": 16777215,
+          "size": 0.085,
+          "material": "e4fdb762-ab75-4a2d-83d9-1b6b2d7cb17e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "ChandelierGlow1",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "c5499e16-50f1-4145-a0ac-52e4f472f311",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 54,
+      "name": "ChandelierGlow2",
+      "traits": {
+        "Transform": {
+          "x": -0.2533,
+          "y": 4.55,
+          "z": -5.3538,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "sphere",
+          "color": 16777215,
+          "size": 0.085,
+          "material": "e4fdb762-ab75-4a2d-83d9-1b6b2d7cb17e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "ChandelierGlow2",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "00cdcc9a-a372-4596-ab4b-0534806ac15a",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 55,
+      "name": "ChandelierGlow3",
+      "traits": {
+        "Transform": {
+          "x": -0.2533,
+          "y": 4.55,
+          "z": -5.6464,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "sphere",
+          "color": 16777215,
+          "size": 0.085,
+          "material": "e4fdb762-ab75-4a2d-83d9-1b6b2d7cb17e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "ChandelierGlow3",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "bb5c0900-cf61-432b-a9f6-742ce6c42a04",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 56,
+      "name": "ChandelierGlow4",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 4.55,
+          "z": -5.7926,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "sphere",
+          "color": 16777215,
+          "size": 0.085,
+          "material": "e4fdb762-ab75-4a2d-83d9-1b6b2d7cb17e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "ChandelierGlow4",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "98777400-8de4-4a1b-9f7e-fe88ed2c4131",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 57,
+      "name": "ChandelierGlow5",
+      "traits": {
+        "Transform": {
+          "x": 0.2533,
+          "y": 4.55,
+          "z": -5.6464,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "sphere",
+          "color": 16777215,
+          "size": 0.085,
+          "material": "e4fdb762-ab75-4a2d-83d9-1b6b2d7cb17e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "ChandelierGlow5",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "c56a83d2-76bc-4a79-84df-31fb1a1b6d64",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 58,
+      "name": "ChandelierGlow6",
+      "traits": {
+        "Transform": {
+          "x": 0.2533,
+          "y": 4.55,
+          "z": -5.3538,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3DPrimitive": {
+          "mesh": "sphere",
+          "color": 16777215,
+          "size": 0.085,
+          "material": "e4fdb762-ab75-4a2d-83d9-1b6b2d7cb17e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "ChandelierGlow6",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "3d",
+          "guid": "3fc33407-b8da-471d-b486-85fcf08179f7",
+          "editorFolder": ""
+        }
+      }
+    },
+    {
+      "id": 59,
+      "name": "ChandelierBulb1",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 4.57,
+          "z": -5.2075,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "ChandelierBulb1",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "31648ba3-5919-4fc6-933b-c6e418a66385",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "point",
+          "color": 16757870,
+          "intensity": 9,
+          "targetX": 0,
+          "targetY": 0,
+          "targetZ": 0,
+          "distance": 13,
+          "angle": 0.5,
+          "penumbra": 0,
+          "castShadow": false,
+          "shadowMapSize": 2048,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0003,
+          "shadowNormalBias": 0.008,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 60,
+      "name": "ChandelierBulb2",
+      "traits": {
+        "Transform": {
+          "x": -0.2533,
+          "y": 4.57,
+          "z": -5.3538,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "ChandelierBulb2",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "267b706f-818c-4529-be30-b6de9fcc340b",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "point",
+          "color": 16757870,
+          "intensity": 9,
+          "targetX": 0,
+          "targetY": 0,
+          "targetZ": 0,
+          "distance": 13,
+          "angle": 0.5,
+          "penumbra": 0,
+          "castShadow": false,
+          "shadowMapSize": 2048,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0003,
+          "shadowNormalBias": 0.008,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 61,
+      "name": "ChandelierBulb3",
+      "traits": {
+        "Transform": {
+          "x": -0.2533,
+          "y": 4.57,
+          "z": -5.6464,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "ChandelierBulb3",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "cae36093-0342-4b29-80b4-eab8c4fc62ac",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "point",
+          "color": 16757870,
+          "intensity": 9,
+          "targetX": 0,
+          "targetY": 0,
+          "targetZ": 0,
+          "distance": 13,
+          "angle": 0.5,
+          "penumbra": 0,
+          "castShadow": false,
+          "shadowMapSize": 2048,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0003,
+          "shadowNormalBias": 0.008,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 62,
+      "name": "ChandelierBulb4",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 4.57,
+          "z": -5.7926,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "ChandelierBulb4",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "83c68e07-ee7a-4006-8bfd-6c263a62e219",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "point",
+          "color": 16757870,
+          "intensity": 9,
+          "targetX": 0,
+          "targetY": 0,
+          "targetZ": 0,
+          "distance": 13,
+          "angle": 0.5,
+          "penumbra": 0,
+          "castShadow": false,
+          "shadowMapSize": 2048,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0003,
+          "shadowNormalBias": 0.008,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 63,
+      "name": "ChandelierBulb5",
+      "traits": {
+        "Transform": {
+          "x": 0.2533,
+          "y": 4.57,
+          "z": -5.6464,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "ChandelierBulb5",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "440bf949-db83-4f88-ab3e-a4f80e892126",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "point",
+          "color": 16757870,
+          "intensity": 9,
+          "targetX": 0,
+          "targetY": 0,
+          "targetZ": 0,
+          "distance": 13,
+          "angle": 0.5,
+          "penumbra": 0,
+          "castShadow": false,
+          "shadowMapSize": 2048,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0003,
+          "shadowNormalBias": 0.008,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 64,
+      "name": "ChandelierBulb6",
+      "traits": {
+        "Transform": {
+          "x": 0.2533,
+          "y": 4.57,
+          "z": -5.3538,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "ChandelierBulb6",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": "",
+          "layer": "",
+          "guid": "d883b881-e8c8-4697-96b8-a4585f5a9cbe",
+          "editorFolder": ""
+        },
+        "Light": {
+          "lightType": "point",
+          "color": 16757870,
+          "intensity": 9,
+          "targetX": 0,
+          "targetY": 0,
+          "targetZ": 0,
+          "distance": 13,
+          "angle": 0.5,
+          "penumbra": 0,
+          "castShadow": false,
+          "shadowMapSize": 2048,
+          "shadowCameraSize": 16,
+          "shadowBias": -0.0003,
+          "shadowNormalBias": 0.008,
+          "shadowRadius": 4,
+          "showShadowFrustum": false
+        }
+      }
+    },
+    {
+      "id": 65,
+      "name": "Time (resource)",
+      "traits": {
+        "Time": {
+          "timeScale": 1
+        }
+      }
+    }
+  ]
+}

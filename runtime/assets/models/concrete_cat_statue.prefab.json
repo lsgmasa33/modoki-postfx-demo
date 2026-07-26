@@ -1,0 +1,68 @@
+{
+  "id": "3b555b33-f496-4936-8aa2-3428d8e9dd59",
+  "version": 1,
+  "name": "Concrete_cat_statue",
+  "rootLocalId": 1,
+  "entities": [
+    {
+      "localId": 1,
+      "name": "Concrete_cat_statue",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "Concrete_cat_statue",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": 0,
+          "layer": "",
+          "guid": ""
+        },
+        "ModelSource": {
+          "glbPath": "0ea83575-2c26-4b26-9d42-d55ccf6143c0",
+          "postprocessor": "none",
+          "prefix": "concrete_cat_statue"
+        }
+      }
+    },
+    {
+      "localId": 2,
+      "name": "concrete_cat_statue",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3D": {
+          "mesh": "599a642f-6d49-4db7-a3ef-b3d42f642faf",
+          "material": "60286c3d-f164-4e4b-a795-838a45c2a008",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "concrete_cat_statue",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": 1,
+          "layer": "3d",
+          "guid": ""
+        }
+      }
+    }
+  ]
+}

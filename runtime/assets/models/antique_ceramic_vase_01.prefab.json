@@ -1,0 +1,68 @@
+{
+  "id": "fcb60804-268f-412d-a47a-f1b06e011033",
+  "version": 1,
+  "name": "Antique_ceramic_vase_01",
+  "rootLocalId": 1,
+  "entities": [
+    {
+      "localId": 1,
+      "name": "Antique_ceramic_vase_01",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "Antique_ceramic_vase_01",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": 0,
+          "layer": "",
+          "guid": ""
+        },
+        "ModelSource": {
+          "glbPath": "b94fdccb-090b-4885-9b2b-98f22a4123ce",
+          "postprocessor": "none",
+          "prefix": "antique_ceramic_vase_01"
+        }
+      }
+    },
+    {
+      "localId": 2,
+      "name": "antique_ceramic_vase_01",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3D": {
+          "mesh": "119b393a-338e-482a-8723-fb169daa3f9e",
+          "material": "3571225d-6dbf-41ed-b477-ecb6b489f526",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "antique_ceramic_vase_01",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": 1,
+          "layer": "3d",
+          "guid": ""
+        }
+      }
+    }
+  ]
+}

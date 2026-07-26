@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "id": "d9571149-6146-473c-b14e-668d47346f80",
+  "postprocessor": "none",
+  "generated": {
+    "meshes": [
+      "/assets/models/meshes/horse_head.mesh.json"
+    ],
+    "materials": [
+      "/assets/models/materials/horse_head.mat.json"
+    ],
+    "textures": [
+      "/assets/models/textures/horse_head_diff_0864b721.png",
+      "/assets/models/textures/horse_head_nor_gl_6d75f4ec_normal.png",
+      "/assets/models/textures/horse_head_metal-horse_head_rough_d38bc9be_rough.png"
+    ]
+  }
+}

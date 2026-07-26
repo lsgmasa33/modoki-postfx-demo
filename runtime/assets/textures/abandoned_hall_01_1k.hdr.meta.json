@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "id": "c17479ff-69df-43c8-8395-509fff3de6ec",
+  "environment": {
+    "format": "hdr",
+    "maxSize": 1024
+  },
+  "environmentCache": {
+    "hash": "540e7cbc2cb899be",
+    "width": 1024,
+    "height": 512,
+    "srcWidth": 1024,
+    "srcHeight": 512
+  }
+}

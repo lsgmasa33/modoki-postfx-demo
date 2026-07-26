@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "id": "0ea83575-2c26-4b26-9d42-d55ccf6143c0",
+  "model": {
+    "encoder": "gltf-transform",
+    "lodCount": 3,
+    "lodRatios": [
+      1,
+      0.4,
+      0.15
+    ],
+    "lodDistances": [
+      0,
+      80,
+      250
+    ],
+    "simplifyError": 0.5,
+    "weld": true,
+    "meshopt": true,
+    "aggressiveSimplify": false
+  },
+  "modelCache": {
+    "hash": "01f00aec84b8e5cd",
+    "processedPath": "/assets/models/concrete_cat_statue.glb.processed.glb",
+    "lodPaths": [
+      "/assets/models/concrete_cat_statue.glb.processed.glb",
+      "/assets/models/concrete_cat_statue.glb.lod1.glb",
+      "/assets/models/concrete_cat_statue.glb.lod2.glb"
+    ],
+    "lodDistances": [
+      0,
+      80,
+      250
+    ]
+  },
+  "postprocessor": "none",
+  "generated": {
+    "meshes": [
+      "/assets/models/meshes/concrete_cat_statue.mesh.json"
+    ],
+    "materials": [
+      "/assets/models/materials/concrete_cat_statue.mat.json"
+    ],
+    "textures": [
+      "/assets/models/textures/concrete_cat_statue_diff_f0b169ac.png",
+      "/assets/models/textures/concrete_cat_statue_nor_gl_c1090891_normal.png",
+      "/assets/models/textures/concrete_cat_statue_metal-concrete_cat_statue_rough_22e5ff87_rough.png"
+    ]
+  }
+}

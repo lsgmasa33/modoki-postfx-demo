@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "id": "256a0daa-6105-4754-8db6-a604ff1ab48e",
+  "texture": {
+    "format": "ktx2-uastc",
+    "maxSize": 2048,
+    "mipmaps": true,
+    "wrapS": "repeat",
+    "wrapT": "repeat",
+    "colorspace": "srgb"
+  },
+  "type": "3d",
+  "textureCache": {
+    "hash": "fc2879518e7dae16",
+    "variants": [
+      "uastc"
+    ],
+    "width": 1024,
+    "height": 1024,
+    "srcWidth": 1024,
+    "srcHeight": 1024,
+    "mipLevels": 11
+  }
+}

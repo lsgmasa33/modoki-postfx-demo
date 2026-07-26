@@ -1,0 +1,68 @@
+{
+  "id": "8878983d-757e-4727-9f1a-e7e0772c62b1",
+  "version": 1,
+  "name": "Gothic_statue",
+  "rootLocalId": 1,
+  "entities": [
+    {
+      "localId": 1,
+      "name": "Gothic_statue",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "Gothic_statue",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": 0,
+          "layer": "",
+          "guid": ""
+        },
+        "ModelSource": {
+          "glbPath": "de255565-923a-4923-8da8-d29bc8281d97",
+          "postprocessor": "none",
+          "prefix": "gothic_statue"
+        }
+      }
+    },
+    {
+      "localId": 2,
+      "name": "gothic_statue",
+      "traits": {
+        "Transform": {
+          "x": -0.028923194855451584,
+          "y": 1.1918599605560303,
+          "z": 0.2721009850502014,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3D": {
+          "mesh": "86fc4bd3-85e3-46d2-b297-09f9a90a14bc",
+          "material": "19ea765a-8d25-4eba-bf7c-c36280a2053e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "gothic_statue",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": 1,
+          "layer": "3d",
+          "guid": ""
+        }
+      }
+    }
+  ]
+}

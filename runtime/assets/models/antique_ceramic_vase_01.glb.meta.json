@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "id": "b94fdccb-090b-4885-9b2b-98f22a4123ce",
+  "model": {
+    "encoder": "gltf-transform",
+    "lodCount": 3,
+    "lodRatios": [
+      1,
+      0.4,
+      0.15
+    ],
+    "lodDistances": [
+      0,
+      80,
+      250
+    ],
+    "simplifyError": 0.5,
+    "weld": true,
+    "meshopt": true,
+    "aggressiveSimplify": false
+  },
+  "modelCache": {
+    "hash": "7aad7eac2961079b",
+    "processedPath": "/assets/models/antique_ceramic_vase_01.glb.processed.glb",
+    "lodPaths": [
+      "/assets/models/antique_ceramic_vase_01.glb.processed.glb",
+      "/assets/models/antique_ceramic_vase_01.glb.lod1.glb",
+      "/assets/models/antique_ceramic_vase_01.glb.lod2.glb"
+    ],
+    "lodDistances": [
+      0,
+      80,
+      250
+    ]
+  },
+  "postprocessor": "none",
+  "generated": {
+    "meshes": [
+      "/assets/models/meshes/antique_ceramic_vase_01.mesh.json"
+    ],
+    "materials": [
+      "/assets/models/materials/antique_ceramic_vase_01.mat.json"
+    ],
+    "textures": [
+      "/assets/models/textures/antique_ceramic_vase_01_diff_1b332f38.png",
+      "/assets/models/textures/antique_ceramic_vase_01_nor_gl_f1ce67c5_normal.png",
+      "/assets/models/textures/antique_ceramic_vase_01_metal-antique_ceramic_vase_01_rough_15428676_rough.png"
+    ]
+  }
+}

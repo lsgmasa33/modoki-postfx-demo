@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "id": "eb003fa0-33e0-4ab3-a820-65db18eba2ce",
+  "model": {
+    "encoder": "gltf-transform",
+    "lodCount": 3,
+    "lodRatios": [
+      1,
+      0.4,
+      0.15
+    ],
+    "lodDistances": [
+      0,
+      80,
+      250
+    ],
+    "simplifyError": 0.5,
+    "weld": true,
+    "meshopt": true,
+    "aggressiveSimplify": false
+  },
+  "modelCache": {
+    "hash": "800bf36821c675b3",
+    "processedPath": "/assets/models/bronze_whale_statue.glb.processed.glb",
+    "lodPaths": [
+      "/assets/models/bronze_whale_statue.glb.processed.glb",
+      "/assets/models/bronze_whale_statue.glb.lod1.glb",
+      "/assets/models/bronze_whale_statue.glb.lod2.glb"
+    ],
+    "lodDistances": [
+      0,
+      80,
+      250
+    ]
+  },
+  "postprocessor": "none",
+  "generated": {
+    "meshes": [
+      "/assets/models/meshes/bronze_whale_statue.mesh.json"
+    ],
+    "materials": [
+      "/assets/models/materials/bronze_whale_statue.mat.json"
+    ],
+    "textures": [
+      "/assets/models/textures/bronze_whale_statue_diff_b25550c6.png",
+      "/assets/models/textures/bronze_whale_statue_nor_gl_ab230b73_normal.png",
+      "/assets/models/textures/bronze_whale_statue_metal-bronze_whale_statue_rough_637979b0_rough.png"
+    ]
+  }
+}

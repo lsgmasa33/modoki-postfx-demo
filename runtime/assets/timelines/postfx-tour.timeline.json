@@ -1,0 +1,86 @@
+{
+  "id": "f685c82a-a56c-4c70-af99-330297ad524b",
+  "name": "PostFX Tour",
+  "duration": 90,
+  "frameRate": 30,
+  "tracks": [
+    {
+      "id": "captions",
+      "name": "Captions",
+      "target": "",
+      "muted": false,
+      "type": "signal",
+      "markers": [
+        {
+          "t": 0,
+          "action": "postfx.showOnly",
+          "params": {
+            "effect": "npr,bloom",
+            "label": "NPR + Bloom — Composed",
+            "ambient": 1,
+            "ambientColor": 16777215,
+            "env": 1,
+            "focus": "df1e271f-47bf-4afd-9fe0-2426a328d8c2",
+            "orbitRadius": 1.3,
+            "focusY": 1.12
+          }
+        },
+        {
+          "t": 15,
+          "action": "postfx.showOnly",
+          "params": {
+            "effect": "bloom",
+            "label": "Bloom — HDR Light Bleed",
+            "focus": "7aa94a57-8ae1-4bb5-8135-4ab09d4e801c",
+            "orbitRadius": 1.6,
+            "focusY": 1.41
+          }
+        },
+        {
+          "t": 30,
+          "action": "postfx.showOnly",
+          "params": {
+            "effect": "vignette",
+            "label": "Vignette — Lens Falloff",
+            "focus": "5c32dd48-a772-40b5-bac2-afa4d6abd3ea",
+            "orbitRadius": 1.7,
+            "focusY": 1.21
+          }
+        },
+        {
+          "t": 45,
+          "action": "postfx.showOnly",
+          "params": {
+            "effect": "dof",
+            "label": "Depth of Field — Bokeh",
+            "focus": "12cd7e4b-896b-4f0c-88f5-c1ac42d73f8b",
+            "orbitRadius": 2,
+            "focusY": 1.33
+          }
+        },
+        {
+          "t": 60,
+          "action": "postfx.showOnly",
+          "params": {
+            "effect": "ao",
+            "label": "Ambient Occlusion (GTAO)",
+            "focus": "d2d62116-0d4b-43a9-87b5-f96eaf331dc0",
+            "orbitRadius": 1.5,
+            "focusY": 1.35
+          }
+        },
+        {
+          "t": 75,
+          "action": "postfx.showOnly",
+          "params": {
+            "effect": "bloom,vignette,dof,ao",
+            "label": "All Composed",
+            "focus": "0c985b10-f45e-47db-a82e-4b2fcfa215e8",
+            "orbitRadius": 3.2,
+            "focusY": 1.74
+          }
+        }
+      ]
+    }
+  ]
+}

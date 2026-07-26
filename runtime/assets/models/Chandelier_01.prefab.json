@@ -1,0 +1,98 @@
+{
+  "id": "4bdd1799-10df-4346-9d90-cfd9926becd3",
+  "version": 1,
+  "name": "Chandelier_01",
+  "rootLocalId": 1,
+  "entities": [
+    {
+      "localId": 1,
+      "name": "Chandelier_01",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "Chandelier_01",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": 0,
+          "layer": "",
+          "guid": ""
+        },
+        "ModelSource": {
+          "glbPath": "b40ee4e7-2293-4995-b2c5-331dbb34d84b",
+          "postprocessor": "none",
+          "prefix": "chandelier_01"
+        }
+      }
+    },
+    {
+      "localId": 2,
+      "name": "Chandelier_01",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 1.570796461153758,
+          "ry": 0,
+          "rz": 0,
+          "sx": 0.009999999776482582,
+          "sy": 0.009999999434197191,
+          "sz": 0.009999999434197191
+        },
+        "Renderable3D": {
+          "mesh": "9e4ee4ab-76ef-4dc6-b525-43fd8d416b6d",
+          "material": "657996e8-dbcf-428f-9a83-70217bdeb7a8",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "Chandelier_01",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": 1,
+          "layer": "3d",
+          "guid": ""
+        }
+      }
+    },
+    {
+      "localId": 3,
+      "name": "Chandelier_01__1",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 1.570796461153758,
+          "ry": 0,
+          "rz": 0,
+          "sx": 0.009999999776482582,
+          "sy": 0.009999999434197191,
+          "sz": 0.009999999434197191
+        },
+        "Renderable3D": {
+          "mesh": "84396f1a-82ec-4e35-b78a-93bb3c2eb558",
+          "material": "04e24dda-30fa-4dff-bbf3-a4a73b32c35e",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "Chandelier_01__1",
+          "isActive": true,
+          "sortOrder": 1,
+          "parentId": 1,
+          "layer": "3d",
+          "guid": ""
+        }
+      }
+    }
+  ]
+}

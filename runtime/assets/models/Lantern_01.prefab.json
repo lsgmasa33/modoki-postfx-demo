@@ -1,0 +1,98 @@
+{
+  "id": "df0b6e5f-e222-420e-aa2c-43a5d9ab6f2e",
+  "version": 1,
+  "name": "Lantern_01",
+  "rootLocalId": 1,
+  "entities": [
+    {
+      "localId": 1,
+      "name": "Lantern_01",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "Lantern_01",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": 0,
+          "layer": "",
+          "guid": ""
+        },
+        "ModelSource": {
+          "glbPath": "c72f60b7-2df4-4435-b432-9e13f617a285",
+          "postprocessor": "none",
+          "prefix": "lantern_01"
+        }
+      }
+    },
+    {
+      "localId": 2,
+      "name": "Lantern_01",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3D": {
+          "mesh": "4974272b-67df-4dad-ade0-3f086280ae77",
+          "material": "ee58b1c1-077c-4f0d-8955-5ac5689d7a9d",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "Lantern_01",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": 1,
+          "layer": "3d",
+          "guid": ""
+        }
+      }
+    },
+    {
+      "localId": 3,
+      "name": "Lantern_01_glass",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3D": {
+          "mesh": "a963210d-866f-494a-8a87-c8da1abeaad9",
+          "material": "fb473171-92b2-4b42-8c3b-d54970702100",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "Lantern_01_glass",
+          "isActive": true,
+          "sortOrder": 1,
+          "parentId": 1,
+          "layer": "3d",
+          "guid": ""
+        }
+      }
+    }
+  ]
+}

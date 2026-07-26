@@ -1,0 +1,78 @@
+{
+  "app": {
+    "appId": "com.modokiengine.postprocessdemo",
+    "appName": "Post-Process Demo",
+    "iconSource": ""
+  },
+  "content": {
+    "scenes": []
+  },
+  "build": {
+    "webDeployMode": "none",
+    "webBucket": "",
+    "webBasePath": "/",
+    "webCdnUrlMap": "",
+    "webCdnBackendBucket": "",
+    "webDeployCommand": "",
+    "appleTeamId": "",
+    "debugBuild": true,
+    "modules": {
+      "render3d": "auto",
+      "render2d": "auto",
+      "physics2d": "auto",
+      "physics3d": "auto",
+      "npr": "auto",
+      "gpuParticles": "auto"
+    },
+    "playableMaxBytes": 5242880,
+    "playableClickUrl": "",
+    "playableNetwork": "applovin"
+  },
+  "capacitor": {
+    "webDir": "dist",
+    "iosContentMode": "mobile",
+    "androidScheme": "http",
+    "allowMixedContent": true,
+    "keyboardResize": "none",
+    "orientation": "auto",
+    "statusBarHidden": false,
+    "statusBarStyle": "default"
+  },
+  "rendering": {
+    "targetFps": 60,
+    "three": {
+      "backend": "auto",
+      "antialias": true,
+      "pixelRatioCap": 2,
+      "shadows": true,
+      "toneMapping": "ACESFilmic",
+      "exposure": 1.2
+    },
+    "pixi": {
+      "backend": "auto",
+      "antialias": true,
+      "resolution": 0
+    },
+    "web": {
+      "sizeMode": "free",
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "physics": {
+    "layers": [
+      "Default"
+    ],
+    "collisionMatrix": [
+      65535
+    ]
+  },
+  "postprocessors": {},
+  "ota": {
+    "enabled": false,
+    "baseUrl": "",
+    "publicKey": "",
+    "bundleName": "shell",
+    "engineApi": 1
+  }
+}

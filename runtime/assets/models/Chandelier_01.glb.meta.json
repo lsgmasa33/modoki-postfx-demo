@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "id": "b40ee4e7-2293-4995-b2c5-331dbb34d84b",
+  "model": {
+    "encoder": "gltf-transform",
+    "lodCount": 3,
+    "lodRatios": [
+      1,
+      0.4,
+      0.15
+    ],
+    "lodDistances": [
+      0,
+      80,
+      250
+    ],
+    "simplifyError": 0.5,
+    "weld": true,
+    "meshopt": true,
+    "aggressiveSimplify": false
+  },
+  "modelCache": {
+    "hash": "2e672d3363d7d038",
+    "processedPath": "/assets/models/Chandelier_01.glb.processed.glb",
+    "lodPaths": [
+      "/assets/models/Chandelier_01.glb.processed.glb",
+      "/assets/models/Chandelier_01.glb.lod1.glb",
+      "/assets/models/Chandelier_01.glb.lod2.glb"
+    ],
+    "lodDistances": [
+      0,
+      80,
+      250
+    ]
+  },
+  "postprocessor": "none",
+  "generated": {
+    "meshes": [
+      "/assets/models/meshes/Chandelier_01.mesh.json",
+      "/assets/models/meshes/Chandelier_01__1.mesh.json"
+    ],
+    "materials": [
+      "/assets/models/materials/basecolor_classic_chandelier_1.mat.json",
+      "/assets/models/materials/lamps_classic_chandelier_1.mat.json"
+    ],
+    "textures": [
+      "/assets/models/textures/Chandelier_01_diff_0a8da3bc.png",
+      "/assets/models/textures/Chandelier_01_nor_gl_85d8f373_normal.png",
+      "/assets/models/textures/Chandelier_01_metallic-Chandelier_01_roughness_3d6f37b0_rough.png"
+    ]
+  }
+}

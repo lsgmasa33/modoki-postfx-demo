@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "id": "c72f60b7-2df4-4435-b432-9e13f617a285",
+  "model": {
+    "encoder": "gltf-transform",
+    "lodCount": 3,
+    "lodRatios": [
+      1,
+      0.4,
+      0.15
+    ],
+    "lodDistances": [
+      0,
+      80,
+      250
+    ],
+    "simplifyError": 0.5,
+    "weld": true,
+    "meshopt": true,
+    "aggressiveSimplify": false
+  },
+  "modelCache": {
+    "hash": "e2139f88b298601b",
+    "processedPath": "/assets/models/Lantern_01.glb.processed.glb",
+    "lodPaths": [
+      "/assets/models/Lantern_01.glb.processed.glb",
+      "/assets/models/Lantern_01.glb.lod1.glb",
+      "/assets/models/Lantern_01.glb.lod2.glb"
+    ],
+    "lodDistances": [
+      0,
+      80,
+      250
+    ]
+  },
+  "postprocessor": "none",
+  "generated": {
+    "meshes": [
+      "/assets/models/meshes/Lantern_01.mesh.json",
+      "/assets/models/meshes/Lantern_01_glass.mesh.json"
+    ],
+    "materials": [
+      "/assets/models/materials/Lantern_01_brass.mat.json",
+      "/assets/models/materials/Lantern_01_glass.mat.json"
+    ],
+    "textures": [
+      "/assets/models/textures/Lantern_01_brass_diff_547f06eb.png",
+      "/assets/models/textures/Lantern_01_brass_nor_gl_2a996729_normal.png",
+      "/assets/models/textures/Lantern_01_brass_metallic-Lantern_01_brass_roughness_32809cde_rough.png"
+    ]
+  }
+}

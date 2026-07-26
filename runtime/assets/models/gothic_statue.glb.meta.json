@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "id": "de255565-923a-4923-8da8-d29bc8281d97",
+  "model": {
+    "encoder": "gltf-transform",
+    "lodCount": 3,
+    "lodRatios": [
+      1,
+      0.4,
+      0.15
+    ],
+    "lodDistances": [
+      0,
+      80,
+      250
+    ],
+    "simplifyError": 0.5,
+    "weld": true,
+    "meshopt": true,
+    "aggressiveSimplify": false
+  },
+  "modelCache": {
+    "hash": "435e8286f9e71c40",
+    "processedPath": "/assets/models/gothic_statue.glb.processed.glb",
+    "lodPaths": [
+      "/assets/models/gothic_statue.glb.processed.glb",
+      "/assets/models/gothic_statue.glb.lod1.glb",
+      "/assets/models/gothic_statue.glb.lod2.glb"
+    ],
+    "lodDistances": [
+      0,
+      80,
+      250
+    ]
+  },
+  "postprocessor": "none",
+  "generated": {
+    "meshes": [
+      "/assets/models/meshes/gothic_statue.mesh.json"
+    ],
+    "materials": [
+      "/assets/models/materials/gothic_statue.mat.json"
+    ],
+    "textures": [
+      "/assets/models/textures/gothic_statue_diff_ba721e5a.png",
+      "/assets/models/textures/gothic_statue_nor_gl_aa8c9db4_normal.png",
+      "/assets/models/textures/gothic_statue_rough_8d322286_rough.png"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "da2f81f9-6e36-4ba0-b5ee-7ecb240d4995",
+  "version": 1,
+  "name": "Bronze_whale_statue",
+  "rootLocalId": 1,
+  "entities": [
+    {
+      "localId": 1,
+      "name": "Bronze_whale_statue",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "EntityAttributes": {
+          "name": "Bronze_whale_statue",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": 0,
+          "layer": "",
+          "guid": ""
+        },
+        "ModelSource": {
+          "glbPath": "eb003fa0-33e0-4ab3-a820-65db18eba2ce",
+          "postprocessor": "none",
+          "prefix": "bronze_whale_statue"
+        }
+      }
+    },
+    {
+      "localId": 2,
+      "name": "bronze_whale_statue",
+      "traits": {
+        "Transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "rx": 0,
+          "ry": 0,
+          "rz": 0,
+          "sx": 1,
+          "sy": 1,
+          "sz": 1
+        },
+        "Renderable3D": {
+          "mesh": "d97003fa-185f-4a48-9b39-103bb03ef864",
+          "material": "db76b836-4da8-44a1-b45b-d8b99db91b29",
+          "isVisible": true
+        },
+        "EntityAttributes": {
+          "name": "bronze_whale_statue",
+          "isActive": true,
+          "sortOrder": 0,
+          "parentId": 1,
+          "layer": "3d",
+          "guid": ""
+        }
+      }
+    }
+  ]
+}
