@@ -1,0 +1,22 @@
+{
+  "appId": "com.modokiengine.postprocessdemo",
+  "appName": "Post-Process Demo",
+  "webDir": "dist",
+  "ios": {
+    "preferredContentMode": "mobile"
+  },
+  "android": {
+    "allowMixedContent": true
+  },
+  "server": {
+    "androidScheme": "http"
+  },
+  "plugins": {
+    "Keyboard": {
+      "resize": "none"
+    },
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}

@@ -11,7 +11,7 @@ via a Director/Timeline tour, then all five composed.
 
 ## This project
 
-- **Scene** (`runtime/assets/scenes/main.json`, ~55 entities):
+- **Scene** (`runtime/assets/scenes/main.scene.json`, ~55 entities):
   - **Gallery shell** — `Floor`/`Ceiling`/`WallBack`/`WallLeft`/`WallRight`/`WallFront`,
     engine-primitive boxes (an 11 × 6.2 × 30 enclosed room, so the HDR leaks no visible
     background) using the original `gallery_floor`/`gallery_wall` materials.
@@ -116,13 +116,17 @@ props at genuinely different depths.
        Safe to push — being NPR's own fill params they affect ONLY this station, so the
        earlier worry about them washing out the gallery was wrong — but they discard form,
        so reach for the two lighting levers first.
-  - **⚠️ Editing a post-FX TSL file and relying on HMR gives you STALE RESULTS.** TSL nodes
-    bake into compiled pipelines, so a hot patch leaves the OLD shader graph running (hence
-    the `import.meta.hot.invalidate()` at the top of these files). While chasing the DOF bug
-    below, three separate "the fix didn't work" conclusions were all just the previous graph
-    still live — `hmrUpdates` was climbing in `get_editor_state` the whole time. **After
-    touching anything under `runtime/rendering/postfx/**` or `npr/**`, reload the renderer
-    (`modoki_dispatch_action engine.reload`) before judging the result.**
+  - **Editing a post-FX TSL file now force-reloads the editor by itself (fixed 2026-07-26).**
+    TSL nodes bake into compiled pipelines, so a hot patch leaves the OLD shader graph running.
+    While chasing the DOF bug below, three separate "the fix didn't work" conclusions were all
+    just the previous graph still live — `hmrUpdates` was climbing in `get_editor_state` the
+    whole time. The dev server now matches `runtime/rendering/postfx/**` + `npr/**` by path and
+    reloads the renderer for you (`isShaderGraphFile` → `modoki:shader-code-changed`; the old
+    per-file `import.meta.hot.invalidate()` was silently swallowed by Scene3D.tsx's Fast Refresh
+    boundary). If the editor has UNSAVED scene edits you get a 5s countdown banner first. The
+    manual `modoki_dispatch_action engine.reload` is no longer needed — but if you ever measure
+    a shader result that looks impossible, check `get_editor_state.staleGameCode` (set when
+    someone cancelled that banner) before believing it.
   - **⚠️ `DepthOfFieldPostFX.focalLength` is NOT the edge of a sharp band — size it several
     times the subject's half-depth.** three computes
     `CoC = smoothstep(0, focalLength, |(-viewZ) - focusDistance|)`
@@ -165,17 +169,17 @@ props at genuinely different depths.
   bare `gltf-pipeline -i x.gltf -o x.glb --binary`.
 - **`UIElement.fontWeight` accepts only `normal` | `bold`** — `'600'` and other numeric CSS
   weights are rejected with a validation warning and silently ignored.
-- **⚠️ Editing a `.timeline.json` on disk does NOT reach the running Director — it is
-  CACHED.** `runtime/loaders/timelineCache.ts` keys parsed timelines by path, and neither a
-  file write nor **`modoki_load_scene` nor a Stop/Play cycle clears it** (all three were
-  tried). Symptom is nasty because it is silent and half-working: the OLD markers keep
-  firing, so captions still update and effects still toggle on schedule — it just looks
-  like your new marker params are being ignored. Diagnosis that actually worked: confirm
-  the code is live via `modoki_list_actions` (it reports each action's param schema), then
-  `modoki_dispatch_action` the SAME params by hand — if the hand-dispatch works and the
-  timeline doesn't, the timeline is stale, not the code. Fix: **reload the renderer**
-  (`modoki_dispatch_action engine.reload`), which re-imports the module and drops the cache.
-  Same class of gotcha as the animation-clip cache.
+- **Editing a `.timeline.json` on disk now reaches the running Director (fixed 2026-07-26).**
+  `runtime/loaders/timelineCache.ts` keys parsed timelines by path, and used to hold one
+  forever: neither a file write nor **`modoki_load_scene` nor a Stop/Play cycle** cleared it
+  (all three were tried). The symptom was nasty because it was silent and half-working — the
+  OLD markers kept firing, so captions still updated and effects still toggled on schedule, and
+  it just looked like the new marker params were being ignored. The dev-server watcher now
+  invalidates the entry on a `.timeline.json` write (no scene reload, so unsaved work is safe).
+  If you ever suspect a stale def again, the diagnosis that worked: confirm the code is live via
+  `modoki_list_actions` (it reports each action's param schema), then `modoki_dispatch_action`
+  the SAME params by hand — if the hand-dispatch works and the timeline doesn't, the timeline is
+  stale, not the code.
 
 - **`modoki_mutate_scene`'s `addEntity` `parentId` must be the FILE's id, which does NOT
   match the LIVE runtime id `modoki_get_scene_state` reports** for an entity added in a
@@ -206,13 +210,34 @@ props at genuinely different depths.
   scaffolder does not backfill `rendering`/`physics`/`content.scenes` blocks, only
   `build`/`app`. Open once in the editor to let it backfill defaults if a build fails on a
   missing config block.
-- **Web-only.** No `ios/`/`android/` folders, and none should be added — demos ship
-  web-only.
+- **Native iOS + Android are committed here** (same arrangement as `demos/2d-physics-demo`):
+  the folders live in the private repo, and `scripts/publish-demo.sh` **drops them from the
+  public snapshot**, so the published demo is still web-only. (This entry used to say
+  "web-only, no `ios/`/`android/` folders, and none should be added" — that is no longer the
+  rule for this demo.)
+- **`build.appleTeamId` is deliberately EMPTY**, and so is the iOS `DEVELOPMENT_TEAM`
+  (`""`). Signing identity is per-machine and does not belong in a demo bound for a public
+  repo. To build on device, set it in **Project Settings → iOS → Signing** — it syncs into
+  the pbxproj on the next open/build. ⚠️ Note an empty `appleTeamId` means *leave the pbxproj
+  alone* (`project-config.ts`), so clearing the config alone does NOT scrub an id already
+  written into the native project — scrub both.
+- Device ids (`iosDeviceId` / `iosDevicectlId`) live in the gitignored `project.user.json`
+  and are never committed. See `docs/build.md` § "iOS Device" for which of the two is
+  required and why a pre-iOS-17 device needs none.
 - Build/run: open in the Modoki Editor (**File → Open Project**), then **Build → Web**, or
-  `MODOKI_PROJECT=demos/postfx-demo npm run build` from the repo root.
-- **The whole stack is WebGPU-only.** On a WebGL2 fallback every post-FX effect is skipped
-  and the plain render runs — the tour still plays (captions still update), it just shows
-  no visible effect until a WebGPU browser/device is used.
+  `MODOKI_PROJECT=demos/postfx-demo npm run build -- --target web` from the repo root.
+- **The stack is NOT WebGPU-only — it runs on WebGL2 too, minus FXAA.** (This entry used to
+  claim every effect was skipped without WebGPU. That was wrong, and an iPhone 8 on iOS
+  16.7 — a device with no WebGPU at all — visibly showing the post-FX is what caught it.)
+  `createRenderer` (`runtime/rendering/scene3DSync.ts`) ALWAYS constructs a
+  `WebGPURenderer`; `preferWebGPU` is vestigial (`void preferWebGPU`), and three falls back
+  to a **WebGL2 backend inside that same class**. The post-FX gate is
+  `isWebGPURenderer === true` (`Scene3D.tsx`), which stays true on that fallback — so the
+  whole stack builds and renders. The ONE stage dropped is **FXAA**
+  (`planFxaaEnabled` → false when `isWebGLBackend`, `postfx/stackPlan.ts`), because it's a
+  raw-WGSL `wgslFn` the WebGL backend's GLSL parser can't compile.
+  Don't infer a backend from `isWebGPU`: it names the renderer CLASS, not the API in use.
+  Read `renderer.backend.isWebGLBackend` for the actual backend.
 
 ---
 
@@ -331,11 +356,11 @@ Post-Process Demo/
     ├── config.ts                        # GameConfig (points at the starting scene)
     ├── setup.ts                         # register your ECS systems here
     └── assets/                          # asset root → served at /assets/...
-        ├── scenes/main.json             # the starting scene (edit via modoki_mutate_scene)
+        ├── scenes/main.scene.json             # the starting scene (edit via modoki_mutate_scene)
         └── models/  textures/  materials/  prefabs/   # drop assets here
 ```
 
-The starting scene's URL is `/assets/scenes/main.json` — pass that as `path` to
+The starting scene's URL is `/assets/scenes/main.scene.json` — pass that as `path` to
 `modoki_mutate_scene` / `modoki_validate_scene`.
 
 Start by inspecting the current scene with `modoki_get_scene_state`, then ask the human
