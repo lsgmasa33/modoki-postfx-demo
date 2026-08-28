@@ -14,9 +14,10 @@ import {
   createTestWorld, type TestWorld, dispatchUIAction,
   EntityAttributes, UIElement, findEntityByGuid,
   NPRPostFX, BloomPostFX, VignettePostFX, DepthOfFieldPostFX, AmbientOcclusionPostFX,
+  setActiveQualityTier, setRenderSettings, resetRenderSettings, TIER_SETTINGS,
 } from '@modoki/engine/runtime';
 import { Light, Environment } from '@modoki/engine/three';
-import { __testing } from '../runtime/setup';
+import { __testing, registerGameSystems, unregisterGameSystems } from '../runtime/setup';
 
 const T = __testing;
 
@@ -100,3 +101,96 @@ describe('postfx.showOnly (integration)', () => {
     expect(envEntity.get(Environment)!.intensity).toBeCloseTo(0.1, 6);
   });
 });
+
+/** The quality-tier caption (#241) — the demo's worked example of `onQualityTierChange`.
+ *
+ *  Why this is worth testing in a DEMO at all: on `low` this project's tier config masks out all
+ *  five effects the tour exists to show, so without the annotation a weak phone runs the whole
+ *  tour narrating "Bloom", "Depth of Field", "GTAO" over a frame where none of them is running.
+ *  That failure is silent and looks exactly like a broken build. */
+describe('captionFor — the tier annotation', () => {
+  afterEach(() => { resetRenderSettings(); });
+
+  /** The engine's `low` seed drops every post-FX effect, which is also what this demo's own
+   *  project.config.json authors — so this is the real shipping config, not a contrived one. */
+  const authorLowTier = () => setRenderSettings({ three: { tiers: { low: TIER_SETTINGS.low } } });
+
+  const bloomStation = () => T.parseEffects('bloom,vignette');
+
+  it('is the bare label when the tier suppresses nothing', () => {
+    setActiveQualityTier({ tier: 'high', source: 'project', reason: 'test' });
+    expect(T.captionFor('Bloom', bloomStation())).toBe('Bloom');
+  });
+
+  it('is the bare label before any tier resolves — no tier means no claim to make', () => {
+    expect(T.captionFor('Bloom', bloomStation())).toBe('Bloom');
+  });
+
+  it('names the suppressed effects, and the tier suppressing them', () => {
+    authorLowTier();
+    setActiveQualityTier({ tier: 'low', source: 'measured', reason: 'test' });
+
+    const out = T.captionFor('Bloom', bloomStation());
+    expect(out).toContain('bloom');
+    expect(out).toContain('vignette');
+    expect(out).toContain("'low' quality tier");
+  });
+
+  it('annotates only what THIS station asked for — not every effect the tier drops', () => {
+    // A station showing bloom should not report that GTAO is also off; it never claimed to show it.
+    authorLowTier();
+    setActiveQualityTier({ tier: 'low', source: 'measured', reason: 'test' });
+
+    expect(T.captionFor('Bloom', T.parseEffects('bloom'))).not.toContain('ao');
+  });
+
+  it('agrees in number — one effect reads "is", several read "are"', () => {
+    authorLowTier();
+    setActiveQualityTier({ tier: 'low', source: 'measured', reason: 'test' });
+
+    expect(T.captionFor('Bloom', T.parseEffects('bloom'))).toMatch(/bloom is off/);
+    expect(T.captionFor('Finale', T.parseEffects('bloom,ao'))).toMatch(/bloom, ao are off/);
+  });
+});
+
+/** A tier change arriving AFTER the world moved on.
+ *
+ *  `registerGameSystems` re-runs only when the GAME changes (App.tsx), never on a scene swap — so
+ *  a station remembered for a later tier change outlives the world it was dispatched in. An
+ *  earlier draft captured that world in `lastStation`; this pins that it does not.
+ *
+ *  Both worlds are kept ALIVE on purpose: disposing the first makes its entities unreachable, so
+ *  "wrote to the old world" and "wrote nowhere" become indistinguishable and the test stops
+ *  discriminating — which is exactly what the mutation check caught in an earlier draft. */
+describe('the tier listener writes to the CURRENT world, not the one the station came from', () => {
+  afterEach(() => { unregisterGameSystems(); resetRenderSettings(); });
+
+  it('captions the live world after the world underneath has been replaced', () => {
+    registerGameSystems();
+    setActiveQualityTier({ tier: 'high', source: 'project', reason: 'test' });
+
+    const a = createTestWorld({ actions: T.actions });
+    a.spawn(EntityAttributes({ name: 'Caption', guid: CAPTION_GUID }), UIElement({ text: '' }));
+    dispatchUIAction('postfx.showOnly', { params: { effect: 'bloom', label: 'Bloom' } });
+    expect(findEntityByGuid(CAPTION_GUID, a.world)!.get(UIElement)!.text).toBe('Bloom');
+
+    // The scene swaps: a NEW world becomes current, carrying its own caption entity. `a` stays
+    // alive and queryable so the assertions below can tell the two apart.
+    const b = createTestWorld({ actions: T.actions });
+    b.spawn(EntityAttributes({ name: 'Caption', guid: CAPTION_GUID }), UIElement({ text: 'stale' }));
+
+    // Only the tier moves — no new station dispatch. The LIVE world must be the one that updates.
+    setRenderSettings({ three: { tiers: { low: TIER_SETTINGS.low } } });
+    setActiveQualityTier({ tier: 'low', source: 'measured', reason: 'test' });
+
+    expect(findEntityByGuid(CAPTION_GUID, b.world)!.get(UIElement)!.text)
+      .toBe("Bloom  (bloom is off at the 'low' quality tier)");
+    // …and the world the station CAME from is untouched. Without this half the test passes even
+    // when the OLD world is the one being written — the defect it exists to catch.
+    expect(findEntityByGuid(CAPTION_GUID, a.world)!.get(UIElement)!.text).toBe('Bloom');
+
+    b.dispose();
+    a.dispose();
+  });
+});
+

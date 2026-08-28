@@ -15,14 +15,12 @@
     "webCdnBackendBucket": "",
     "webDeployCommand": "",
     "appleTeamId": "",
-    "debugBuild": true,
+    "debugBuild": false,
     "modules": {
       "render3d": "auto",
       "render2d": "auto",
       "physics2d": "auto",
-      "physics3d": "auto",
-      "npr": "auto",
-      "gpuParticles": "auto"
+      "physics3d": "auto"
     },
     "playableMaxBytes": 5242880,
     "playableClickUrl": "",
@@ -46,7 +44,57 @@
       "pixelRatioCap": 2,
       "shadows": true,
       "toneMapping": "ACESFilmic",
-      "exposure": 1.2
+      "exposure": 1.2,
+      "tiers": {
+        "mid": {
+          "pixelRatioCap": 1.5,
+          "antialias": false,
+          "shadows": true,
+          "shadowMapCeiling": 1024,
+          "postFX": {
+            "npr": false,
+            "ao": false,
+            "dof": false,
+            "bloom": true,
+            "vignette": true
+          },
+          "maxDirectional": 2,
+          "maxLocal": 3,
+          "ibl": true,
+          "iblOffAmbientBoost": 1,
+          "iblOffExposure": 1,
+          "targetFps": 0,
+          "pixiPixelRatioCap": 1,
+          "pixiAntialias": false,
+          "textureMaxSize": 1024,
+          "maxShadowCasters": 1,
+          "hysteresisMargin": 0.15
+        },
+        "low": {
+          "pixelRatioCap": 1,
+          "antialias": false,
+          "shadows": false,
+          "shadowMapCeiling": 512,
+          "postFX": {
+            "npr": false,
+            "ao": false,
+            "dof": false,
+            "bloom": false,
+            "vignette": false
+          },
+          "maxDirectional": 1,
+          "maxLocal": 1,
+          "ibl": false,
+          "iblOffAmbientBoost": 4,
+          "iblOffExposure": 1.25,
+          "targetFps": 30,
+          "pixiPixelRatioCap": 1,
+          "pixiAntialias": false,
+          "textureMaxSize": 512,
+          "maxShadowCasters": 1,
+          "hysteresisMargin": 0.15
+        }
+      }
     },
     "pixi": {
       "backend": "auto",
